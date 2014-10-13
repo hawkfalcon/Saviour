@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Flash here.
+ * Write a description of class Fade here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Flash extends Actor {
+public class Fade extends Actor {
     boolean fadeIn = true;
     int transparency = 0;
     World nWorld;
-    public Flash(World nWorld, boolean fadeIn) {
+    public Fade(World nWorld, boolean fadeIn) {
         this.fadeIn = fadeIn;
         this.nWorld = nWorld;
         if (!fadeIn) transparency = 255;
@@ -26,13 +26,13 @@ public class Flash extends Actor {
       getImage().setTransparency(transparency);   
       if (fadeIn) {
         if (transparency < 255) {
-            transparency++; 
+            transparency += 3; 
         } else {
            Greenfoot.setWorld(nWorld);
         }
       } else {
-        if (transparency > 0) {
-            transparency--; 
+        if (transparency > 1) {
+            transparency -= 2; 
         } else {
            getWorld().removeObject(this);
         }

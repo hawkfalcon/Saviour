@@ -19,8 +19,8 @@ public class SaviourWorld extends World
         super(900, 600, 1); 
         prepare();
         setPaintOrder(Solid.class, Obstacle.class);
-        setPaintOrder(Flash.class, Solid.class);
-        addObject(new Flash(null, false), getWidth()/2, getHeight()/2);   
+        setPaintOrder(Fade.class, Solid.class);
+        addObject(new Fade(null, false), getWidth()/2, getHeight()/2);   
     }
 
     /**
