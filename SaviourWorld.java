@@ -1,26 +1,26 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * Write a description of class SaviourWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The main game world: SaviourWorld
+ *
+ * @author Tristen Miller
  */
-public class SaviourWorld extends World
-{
+public class SaviourWorld extends World {
 
     /**
      * Constructor for objects of class SaviourWorld.
-     * 
      */
-    public SaviourWorld()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 600, 1); 
+    public SaviourWorld() {
+        // Create a new world with 900x600 cells with a cell size of 1x1 pixels.
+        super(900, 600, 1);
+        //setup objects
         prepare();
+        //make sure obstacles are behind the walls
         setPaintOrder(Solid.class, Obstacle.class);
+        //make sure the black fade is in front
         setPaintOrder(Fade.class, Solid.class);
-        addObject(new Fade(null, false), getWidth()/2, getHeight()/2);   
+        //fade the world in
+        addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
 
     /**
@@ -28,7 +28,8 @@ public class SaviourWorld extends World
      * objects and add them to the world.
      */
     int wallSize = 30;
-    int halfWall = wallSize/2;
+    int halfWall = wallSize / 2;
+
     private void prepare() {
         Startpoint start = new Startpoint();
         addObject(start, 90, 70);
@@ -41,43 +42,45 @@ public class SaviourWorld extends World
     }
 
     private void prepareWalls() {
-                //top and bottom (horizontal)
-        for (int i = 0; i < getWidth()/wallSize ; i++){
+        //top and bottom (horizontal)
+        for (int i = 0; i < getWidth() / wallSize; i++) {
             addObject(new Wall(), getPos(i), halfWall);
-            addObject(new Wall(), getPos(i), getHeight()-halfWall) ;
+            addObject(new Wall(), getPos(i), getHeight() - halfWall);
         }
         //left and right (verticle)
-        for (int i = 1; i < getHeight()/wallSize ; i++) {
-            addObject(new Wall(), halfWall, getPos(i)) ;
-            addObject(new Wall(), getWidth()-halfWall, getPos(i));
-        } 
+        for (int i = 1; i < getHeight() / wallSize; i++) {
+            addObject(new Wall(), halfWall, getPos(i));
+            addObject(new Wall(), getWidth() - halfWall, getPos(i));
+        }
         //middle shiz
-        for (int i = 1; i < 15 ; i++) {
+        for (int i = 1; i < 15; i++) {
             if (getPos(i) != 255) {
-            addObject(new Wall(), getWidth()/2 + halfWall, getPos(i));
+                addObject(new Wall(), getWidth() / 2 + halfWall, getPos(i));
+            }
         }
-        } 
-        for (int i = 5; i < 15 ; i++) {
-            addObject(new Wall(), (getWidth()/6)*5 - halfWall, getPos(i));
+        for (int i = 5; i < 15; i++) {
+            addObject(new Wall(), (getWidth() / 6) * 5 - halfWall, getPos(i));
         }
-        for (int i = 5; i < 19 ; i++) {
-            addObject(new Wall(), (getWidth()/3)*2 + halfWall, getPos(i));
-        } 
-        for (int i = 5; i < 19 ; i++) {
-            addObject(new Wall(), getWidth()/3 + halfWall, getPos(i));
-        } 
-        for (int i = 1; i < 15 ; i++) {
-            addObject(new Wall(), getWidth()/6 + halfWall, getPos(i));
-        } 
-        for (int i = 21; i < 24 ; i++) {
-            addObject(new Wall(), getPos(i), getHeight()/4 + halfWall);
-        }         
+        for (int i = 5; i < 19; i++) {
+            addObject(new Wall(), (getWidth() / 3) * 2 + halfWall, getPos(i));
+        }
+        for (int i = 5; i < 19; i++) {
+            addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
+        }
+        for (int i = 1; i < 15; i++) {
+            addObject(new Wall(), getWidth() / 6 + halfWall, getPos(i));
+        }
+        for (int i = 21; i < 24; i++) {
+            addObject(new Wall(), getPos(i), getHeight() / 4 + halfWall);
+        }
     }
-    
+
+    //get position the wall should be
     public int getPos(int i) {
         return wallSize * i + halfWall;
     }
-    
+
+    //add the obstacles
     public void addObstacles() {
         addArrow(165, 465, false);
         addArrow(465, 255, true);
@@ -88,15 +91,15 @@ public class SaviourWorld extends World
         s.setRotation(180);
         addObject(s, 480, 240);
     }
-    
+
     public void addLauncher(int x, int y) {
-       addObject(new Launcher(), x, y);
-    }    
-    
+        addObject(new Launcher(), x, y);
+    }
+
     public void addArrow(int x, int y, boolean right) {
         Arrow arrow = new Arrow();
         if (right) arrow.turn(180);
         addLauncher(x, y);
-        addObject(arrow, x, y);
+        addObject(arrow, x + 1, y);
     }
 }
