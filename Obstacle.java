@@ -19,7 +19,8 @@ public class Obstacle extends Actor {
         c = getOneIntersectingObject(Character.class);
         if (c != null) {
             getWorld().removeObject(c);
-            getWorld().addObject(new Fade(new SaviourWorld(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            SaviourWorld sw = new SaviourWorld();
+            getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
         }
     }
 

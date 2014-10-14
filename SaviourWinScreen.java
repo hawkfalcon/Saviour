@@ -5,6 +5,7 @@ import greenfoot.*;
  *
  * @author Tristen Miller
  */
+
 public class SaviourWinScreen extends World {
 
     /**
@@ -20,7 +21,7 @@ public class SaviourWinScreen extends World {
     public void act() {
         if (Greenfoot.mouseClicked(this)) {
             SaviourWorld sw = new SaviourWorld();
-            Greenfoot.setWorld(sw);
+            Greenfoot.setWorld(sw.getNextLevel());
         }
     }
 }
