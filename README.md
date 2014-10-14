@@ -1,6 +1,11 @@
 SAVIOUR!
+
 GAME FOR CPE123 AT CAL POLY
+
 GAME OF LOANS GROUP # 6
+
 VERSION 0.01
+
 AUTHORS:
+
 Tristen, Poojitha, Dane, Leighton, Manasi
