@@ -1,20 +1,15 @@
 /**
- * Write a description of class Spikes here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Spikes
  */
 public class Spikes extends Obstacle {
+    //Takes a speed int (new Spikes(2);)
     public Spikes(int speed) {
-        initSlider(23, 1, 0, speed);
+        //int incrementX, int incrementY, int speed, int distance
+        initSlider(1, 0, speed, 23);
     }
 
-    /**
-     * Act - do whatever the Spikes wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() {
         slider();
-        hitCharacter();
+        killer();
     }
 }

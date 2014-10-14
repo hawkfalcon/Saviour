@@ -1,15 +1,10 @@
 import greenfoot.*;
+
 /**
- * Write a description of class SaviourWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Basic level manager to get new levels
  */
 public class SaviourWorld {
-    
-    public SaviourWorld() {
-    }
-        
+    //todo implement
     public World getNextLevel() {
         return new Dungeon1();
     }

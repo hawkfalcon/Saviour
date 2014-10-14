@@ -1,10 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Endpoint here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * The goal to get to at the end of the level
  */
 public class Endpoint extends Actor {
     /**
@@ -16,8 +13,7 @@ public class Endpoint extends Actor {
     }
 
     public void characterHitsEndpoint() {
-        Actor c;
-        c = getOneIntersectingObject(Character.class);
+        Actor c = getOneIntersectingObject(Character.class);
         if (c != null) {
             getWorld().removeObject(c);
             getWorld().addObject(new Fade(new SaviourWinScreen(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);

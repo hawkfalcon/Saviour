@@ -1,27 +1,17 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Character here.
- *
- * @author Tristen Miller
- * @version (a version number or a date)
+ * Your character. Basic ARROW KEY movement.
  */
+
 public class Character extends Actor {
-    int moveAmount = 4;
+    int moveAmount = 4; //speed we move
 
     public void act() {
         moveWithKeys();
     }
 
-    public void setLocation(int x, int y) {
-        int oldX = getX();
-        int oldY = getY();
-        super.setLocation(x, y);
-        if (!getIntersectingObjects(Solid.class).isEmpty()) {
-            super.setLocation(oldX, oldY);
-        }
-    }
-
+    //I hope this is self explanatory.
     public void moveWithKeys() {
         if (Greenfoot.isKeyDown("left")) {
             setLocation(getX() - moveAmount, getY());
@@ -34,6 +24,19 @@ public class Character extends Actor {
         }
         if (Greenfoot.isKeyDown("down")) {
             setLocation(getX(), getY() + moveAmount);
+        }
+    }
+
+    //We override the setLocation to take into account solid actors.
+    //this was borrowed partially from the greenfoot website.
+    public void setLocation(int x, int y) {
+        //save the old location before we move
+        int oldX = getX();
+        int oldY = getY();
+        super.setLocation(x, y);
+        //don't actually move if there is a solid object blocking us.
+        if (!getIntersectingObjects(Solid.class).isEmpty()) {
+            super.setLocation(oldX, oldY);
         }
     }
 }

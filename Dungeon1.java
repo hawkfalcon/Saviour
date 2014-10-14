@@ -1,29 +1,28 @@
-import greenfoot.*;
-
 /**
- * The main game world: SaviourWorld
+ * The first level
  *
  * @author Tristen Miller
  */
 
-public class Dungeon1 extends SaviourLevelManager {
+public class Dungeon1 extends SaviourLevel {
 
     /**
      * Constructor for objects of class Dungeon1.
-     * 
      */
     public Dungeon1() {
-       super(90, 70, 675, 200);
-       prepare();       
+        //int xStart, int yStart, int xEnd, int yEnd
+        super(90, 70, 675, 200);
+        prepare();
     }
-    
+
     public void prepare() {
         prepareWalls();
         prepareObstacles();
     }
-    
+
     public void prepareWalls() {
-        //middle shiz
+        //generates all the walls. 
+        //you could just place them and save the world.
         for (int i = 1; i < 15; i++) {
             if (getPos(i) != 255) {
                 addObject(new Wall(), getWidth() / 2 + halfWall, getPos(i));
@@ -45,18 +44,15 @@ public class Dungeon1 extends SaviourLevelManager {
             addObject(new Wall(), getPos(i), getHeight() / 4 + halfWall);
         }
     }
-    
-        
+
     //add the obstacles
+    //addObstacle(Obstacle obstacle, int x, int y, boolean launcher, int rotation);
     public void prepareObstacles() {
-        addArrow(165, 465, false);
-        addArrow(465, 255, true);
-        addLauncher(465, 465);
-        addObject(new Spear(), 465, 465);
-        addObject(new Spikes(2), 573, 300);
-        Spikes s = new Spikes(1);
-        s.setRotation(180);
-        addObject(s, 480, 240);
+        addObstacle(new Arrow(), 165, 465, true);
+        addObstacle(new Arrow(), 465, 255, true, 180);
+        addObstacle(new Spear(), 465, 465, true, 90);
+        addObstacle(new Spikes(2), 573, 300);
+        addObstacle(new Spikes(1), 480, 240, false, 180);
     }
-        
+
 }

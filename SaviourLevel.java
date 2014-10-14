@@ -5,16 +5,30 @@ import greenfoot.*;
  *
  * @author Tristen Miller
  */
-public class SaviourLevelManager extends World {
+public class SaviourLevel extends World {
+    /**
+     * A class can extend SaviourLevel the same way you extend world.
+     * Use a super like super(int xStart, int yStart, int xEnd, int yEnd) in the constructor
+     * This sets the endpoint and startpoint.
+     * <p/>
+     * To set your obstacles, you can use the built in methods:
+     * addObstacle(Obstacle obstacle, int x, int y);
+     * addObstacle(Obstacle obstacle, int x, int y, boolean launcher);
+     * addObstacle(Obstacle obstacle, int x, int y, boolean launcher, int rotation) {
+     * addLauncher(int x, int y);
+     * <p/>
+     * EXAMPLE: addObstacle(new Arrow(), 0, 0);
+     */
 
     int xStart = 90;
     int yStart = 70;
     int xEnd = 675;
     int yEnd = 200;
+
     /**
      * Constructor for objects of class SaviourLevelManager.
      */
-    public SaviourLevelManager(int xStart, int yStart, int xEnd, int yEnd) {
+    public SaviourLevel(int xStart, int yStart, int xEnd, int yEnd) {
         // Create a new world with 900x600 cells with a cell size of 1x1 pixels.
         super(900, 600, 1);
         //initialize variables
@@ -40,17 +54,17 @@ public class SaviourLevelManager extends World {
         addObject(new Endpoint(), xEnd, yEnd);
         borderize();
     }
-    
+
     private void initializeWorld(int xStart, int yStart, int xEnd, int yEnd) {
         this.xStart = xStart;
         this.yStart = yStart;
         this.xEnd = xEnd;
         this.yEnd = yEnd;
     }
-        
-    
+
     int wallSize = 30;
     int halfWall = wallSize / 2;
+
     private void borderize() {
         //top and bottom (horizontal)
         for (int i = 0; i < getWidth() / wallSize; i++) {
@@ -69,14 +83,26 @@ public class SaviourLevelManager extends World {
         return wallSize * i + halfWall;
     }
 
+    //add a non-wall solid object
     public void addLauncher(int x, int y) {
         addObject(new Launcher(), x, y);
     }
 
-    public void addArrow(int x, int y, boolean right) {
-        Arrow arrow = new Arrow();
-        if (right) arrow.turn(180);
-        addLauncher(x, y);
-        addObject(arrow, x + 1, y);
+    //add an obstacle
+    public void addObstacle(Obstacle obstacle, int x, int y) {
+        addObject(obstacle, x, y);
+    }
+
+    //add both an obstacle and a launcher
+    public void addObstacle(Obstacle obstacle, int x, int y, boolean launcher) {
+        if (launcher) addLauncher(x, y);
+        addObject(obstacle, x + 1, y);
+    }
+
+    //add an obstacle and a launcher at a rotation
+    public void addObstacle(Obstacle obstacle, int x, int y, boolean launcher, int rotation) {
+        if (launcher) addLauncher(x, y);
+        obstacle.setRotation(rotation);
+        addObstacle(obstacle, x, y);
     }
 }
