@@ -25,6 +25,7 @@ public class Character extends Actor {
         if (Greenfoot.isKeyDown("down")) {
             setLocation(getX(), getY() + moveAmount);
         }
+       
     }
 
     //We override the setLocation to take into account solid actors.
