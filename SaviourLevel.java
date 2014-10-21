@@ -40,7 +40,7 @@ public class SaviourLevel extends World {
         //make sure the black fade is in front
         setPaintOrder(Fade.class, Solid.class);
         //fade the world in
-        addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
+        //addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
 
     /**
