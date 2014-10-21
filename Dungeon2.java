@@ -2,9 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Dungeon2 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Layout of Dungeon 2
+ * @author Manasi Nagtode
+ * @version 1 Oct 21, 2014
  */
 public class Dungeon2 extends SaviourLevel
 {
@@ -16,5 +16,51 @@ public class Dungeon2 extends SaviourLevel
     public Dungeon2()
     {
          super(90, 70, 675, 200);
+         prepareWalls();
+    }
+    public void prepareWalls() {
+        
+        //for (int i = 1; i < 15; i++) {
+        //    if (getPos(i) != 255) {
+        //        addObject(new Wall(), getWidth() / 2 + halfWall, getPos(i));  
+        //    }
+        //}
+        //third vert line
+         // first vertical wall
+        for (int i = 1; i < 15; i++) {
+            addObject(new Wall(), getWidth() / 6 - halfWall, getPos(i));
+        }
+        //second vertical wall
+        for (int i = 5; i < 19; i++) {
+            addObject(new Wall(), getWidth() / 4 + halfWall, getPos(i));
+        }
+        //third vertical wall
+        for (int i = 1; i < 15; i++){
+            addObject(new Wall(), ((getWidth() / 3) + 40), getPos(i));
+        }
+         //fourth vertical
+        for (int i = 5; i < 19; i++) {
+            addObject(new Wall(), getWidth() / 2 + halfWall, getPos(i));
+        }
+         // fifth vertical wall line
+        for (int i = 5; i < 15; i++) {
+            addObject(new Wall(), (getWidth() / 5) * 4 - halfWall, getPos(i));
+        }
+        //horizontal right top-most wall
+        for (int i = 15; i < 24; i++) {
+          addObject(new Wall(),  getPos(i), ((getHeight() / 5) + 0) + halfWall);
+        }
+        // hortizontal right bottom-most wall
+        for (int i = 19; i < 24; i++) {
+           addObject(new Wall(), getPos(i), ((getHeight() / 5) * 4 - 30) + halfWall);
+        }
+        //horizontal second from bottom wall
+        for (int i = 16; i < 20; i++) {
+           addObject(new Wall(), getPos(i), ((getHeight() / 2) + 30) + halfWall);
+        }
+        // horizontal second from top wall
+        for (int i = 19; i < 24; i++) {
+           addObject(new Wall(), getPos(i), ((getHeight() / 3) + 55) );
+        }
     }
 }
