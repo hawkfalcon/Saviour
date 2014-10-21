@@ -23,23 +23,29 @@ public class Dungeon1 extends SaviourLevel {
     public void prepareWalls() {
         //generates all the walls. 
         //you could just place them and save the world.
+        //Middle Wall
         for (int i = 1; i < 15; i++) {
             if (getPos(i) != 255) {
                 addObject(new Wall(), getWidth() / 2 + halfWall, getPos(i));
             }
         }
+        //Far Right Wall
         for (int i = 5; i < 15; i++) {
             addObject(new Wall(), (getWidth() / 6) * 5 - halfWall, getPos(i));
         }
+        //Middle Right Wall
         for (int i = 5; i < 19; i++) {
             addObject(new Wall(), (getWidth() / 3) * 2 + halfWall, getPos(i));
         }
+        //Middle Left Wall
         for (int i = 5; i < 19; i++) {
             addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
         }
+        //Far Left Wall
         for (int i = 1; i < 15; i++) {
             addObject(new Wall(), getWidth() / 6 + halfWall, getPos(i));
         }
+        // Little Wall Above End Point
         for (int i = 21; i < 24; i++) {
             addObject(new Wall(), getPos(i), getHeight() / 4 + halfWall);
         }
