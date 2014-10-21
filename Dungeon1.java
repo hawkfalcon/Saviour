@@ -20,7 +20,6 @@ public class Dungeon1 extends SaviourLevel {
         prepareObstacles();
     }
 
-//<<<<<<< Updated upstream
     public void prepareWalls() {
         //generates all the walls. 
         //you could just place them and save the world.
@@ -51,9 +50,6 @@ public class Dungeon1 extends SaviourLevel {
             addObject(new Wall(), getPos(i), getHeight() / 4 + halfWall);
         }
     }
-//=======
- 
-//>>>>>>> Stashed changes
 
     //add the obstacles
     //addObstacle(Obstacle obstacle, int x, int y, boolean launcher, int rotation);
