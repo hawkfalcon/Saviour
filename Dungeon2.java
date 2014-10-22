@@ -16,8 +16,13 @@ public class Dungeon2 extends SaviourLevel
     public Dungeon2()
     {
          super(90, 70, 675, 200);
-         prepareWalls();
+         prepare();
     }
+    public void prepare() {
+        prepareWalls();
+        prepareObstacles();
+    }
+    
     public void prepareWalls() {
         
         //for (int i = 1; i < 15; i++) {
@@ -27,15 +32,21 @@ public class Dungeon2 extends SaviourLevel
         //}
         //third vert line
          // first vertical wall
-        for (int i = 1; i < 15; i++) {
+        for (int i = 1; i < 8; i++) {
+            addObject(new Wall(), getWidth() / 6 - halfWall, getPos(i));
+        }
+         for (int i = 9; i < 15; i++) {
             addObject(new Wall(), getWidth() / 6 - halfWall, getPos(i));
         }
         //second vertical wall
-        for (int i = 5; i < 19; i++) {
+        for (int i = 6; i < 19; i++) {
             addObject(new Wall(), getWidth() / 4 + halfWall, getPos(i));
         }
         //third vertical wall
-        for (int i = 1; i < 15; i++){
+        for (int i = 1; i < 4; i++){
+            addObject(new Wall(), ((getWidth() / 3) + 40), getPos(i));
+        }
+        for (int i = 5; i < 15; i++){
             addObject(new Wall(), ((getWidth() / 3) + 40), getPos(i));
         }
          //fourth vertical
@@ -63,4 +74,16 @@ public class Dungeon2 extends SaviourLevel
            addObject(new Wall(), getPos(i), ((getHeight() / 3) + 55) );
         }
     }
+    
+    public void prepareObstacles() {
+        addObstacle(new Arrow(),getWidth() / 6 - halfWall, getPos(15), true,180); 
+        addObstacle(new Arrow(),getWidth() / 6 - halfWall, getPos(8), true, 180);
+        addObstacle(new Arrow(),getWidth() / 4 + halfWall, getPos(5), true, -90);
+        addObstacle(new Spikes(2), 500, 300, false, 180);
+        addObstacle(new Spikes(1), ((getWidth() / 3) + -0), 480, false);
+        addObstacle(new Arrow(), ((getWidth() / 3) + 40), getPos(4), true);
+        addObstacle(new Spear(), getPos(23),((getHeight() / 5) * 4 - 30) + halfWall, false, 90);
+       
+
+}
 }
