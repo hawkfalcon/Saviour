@@ -16,7 +16,9 @@ public class Endpoint extends Actor {
         Actor c = getOneIntersectingObject(Character.class);
         if (c != null) {
             getWorld().removeObject(c);
-            getWorld().addObject(new Fade(new Dungeon2(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            SaviourWorld sw = SaviourWorld.getInstance();
+            sw.levelup();
+            getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);            
         }
     }
 }

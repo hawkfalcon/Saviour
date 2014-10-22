@@ -29,7 +29,7 @@ public class Obstacle extends Actor {
             //remove him
             getWorld().removeObject(c);
             //get the world manager
-            SaviourWorld sw = new SaviourWorld();
+            SaviourWorld sw = SaviourWorld.getInstance();
             //restart level
             getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
         }
