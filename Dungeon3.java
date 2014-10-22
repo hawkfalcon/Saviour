@@ -90,8 +90,8 @@ public class Dungeon3 extends SaviourLevel {
         //adds randoms
         addObstacle(new Acid(), 420, 360);
         
-        addObstacle(new Brick(), 495, 185);
-        addObstacle(new Brick(), 705, 275);
+        addObstacle(new Brick(1), 495, 185);
+        addObstacle(new Brick(2), 705, 275);
     }
 }
 
