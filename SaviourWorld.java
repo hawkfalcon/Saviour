@@ -30,8 +30,8 @@ public class SaviourWorld {
     public World getNextLevel() {
         switch (currentLevel) {
            case 1: return new Dungeon1();
-           case 2: return new Dungeon2();
-           case 3: return new Dungeon3();
+           case 2: return new Dungeon3();
+           //case 3: return new Dungeon3();
            default: return new SaviourIntroScreen();
         } 
     }
