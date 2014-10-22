@@ -17,21 +17,19 @@ public class SaviourWorld {
     
     public void levelup() {
         currentLevel++;
-        if (currentLevel > 3) {
-            reset();
-        }
     }
     
     public void reset() {
-        currentLevel = 0;
+        currentLevel = 1;
     }
     
     //todo implement
     public World getNextLevel() {
         switch (currentLevel) {
            case 1: return new Dungeon1();
-           case 2: return new Dungeon3();
-           //case 3: return new Dungeon3();
+           case 2: return new Dungeon2();
+           case 3: return new Dungeon3();
+           case 4: return new SaviourWinScreen();
            default: return new SaviourIntroScreen();
         } 
     }

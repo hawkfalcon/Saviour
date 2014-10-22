@@ -14,8 +14,9 @@ public class SaviourWinScreen extends World {
     //restart game on click
     public void act() {
         if (Greenfoot.mouseClicked(this)) {
-            SaviourWorld sw = new SaviourWorld();
-            Greenfoot.setWorld(sw.getNextLevel());
+            SaviourWorld sw = SaviourWorld.getInstance();
+            sw.reset();
+            addObject(new Fade(sw.getNextLevel(), true), getWidth() / 2, getHeight() / 2);            
         }
     }
 }
