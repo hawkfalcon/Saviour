@@ -21,8 +21,7 @@ public class Dungeon3 extends SaviourLevel {
     public void prepareWalls()
     {
         //generates all the walls. 
-        //you could just place them and save the world.
-        
+               
         //Top Left Wall Horizontal Wall
          for (int i = 1; i < 5; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
@@ -87,9 +86,10 @@ public class Dungeon3 extends SaviourLevel {
         addObstacle(new Spear(), 315, 465, false, 90); 
         addObstacle(new Spear(), 465, 155, false, 270); 
         
-        //adds randoms
+        //adds acid
         addObstacle(new Acid(), 420, 360);
         
+        //adds bricks
         addObstacle(new Brick(1), 495, 185);
         addObstacle(new Brick(2), 705, 275);
     }
