@@ -37,6 +37,8 @@ public class SaviourLevel extends World {
         prepare();
         //make sure obstacles are behind the walls
         setPaintOrder(Solid.class, Obstacle.class);
+        //make sure the timer is in front
+        setPaintOrder(Timer.class, Solid.class);
         //make sure the black fade is in front
         setPaintOrder(Fade.class, Solid.class);
         //fade the world in
@@ -52,6 +54,7 @@ public class SaviourLevel extends World {
         addObject(new Startpoint(), xStart, yStart);
         addObject(new Character(), xStart, yStart);
         addObject(new Endpoint(), xEnd, yEnd);
+        addObject(new Timer(), 810, 45);
         borderize();
     }
 
