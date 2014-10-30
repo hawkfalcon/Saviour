@@ -84,9 +84,24 @@ public class Kitchen1 extends SaviourLevel
         addObstacle(new Arrow(), 465, 165, true, 180);
         
         //adds the walls
+        addObject(new Wall(), 240, 496);
+        addObject(new Wall(), 240, 525);
+        addObject(new Wall(), 240, 555);
         
         //adds spears
+        addObstacle(new Spear(), 735, 465, false, 90);
+        addObstacle(new Spear(), 50, 345, false);
         
         //adds acids
+        addObstacle(new Acid(), 123, 280);
+        addObstacle(new Acid(), 174, 280);
+        addObstacle(new Acid(), 174, 236);
+        addObstacle(new Acid(), 354, 322);
+        addObstacle(new Acid(), 283, 215);
+        addObstacle(new Acid(), 283, 171);
+        
+        //adds spikes
+        addObstacle(new Spikes(1), 850, 285);
+        addObstacle(new Spikes(2), 750, 350, false, 180);
     }
 }
