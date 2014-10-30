@@ -14,5 +14,6 @@ public class Brick extends Obstacle
     public void act() 
     {
         slider();
+        killer();
     }    
 }
