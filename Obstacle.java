@@ -4,6 +4,8 @@ import greenfoot.*;
  * Easily create Obstacles
  */
 public class Obstacle extends Actor {
+    public boolean haungsmode = false;
+    
     /**
      * Things you can use in an obstacle:
      * killer(); (kills on touch)
@@ -23,15 +25,22 @@ public class Obstacle extends Actor {
 
     //kill player if touched
     public void killer() {
-        //get character
-        Actor c = getOneIntersectingObject(Character.class);
-        if (c != null) {
-            //remove him
-            getWorld().removeObject(c);
-            //get the world manager
-            SaviourWorld sw = SaviourWorld.getInstance();
-            //restart level
-            getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+        //check if Haungs Mode has been activated
+        if (haungsMode() == false){
+            //get character
+            Actor c = getOneIntersectingObject(Character.class);
+            if (c != null) {
+                //remove him
+                getWorld().removeObject(c);
+                //get the world manager
+                SaviourWorld sw = SaviourWorld.getInstance();
+                //restart level
+                getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+            }
+            
+        }
+        if (haungsMode() == true){
+            //do nothing
         }
     }
 
@@ -83,5 +92,18 @@ public class Obstacle extends Actor {
         } else {
             adjustingSpeed--;
         }
+    }
+    
+    public void powerUp()
+    {
+        if (Greenfoot.isKeyDown("h"))
+        {
+            haungsmode = true;
+        }
+    }
+    
+    public boolean haungsMode()
+    {
+        return haungsmode;
     }
 }

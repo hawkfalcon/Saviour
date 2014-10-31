@@ -6,9 +6,10 @@ import greenfoot.*;
 
 public class Character extends Actor {
     int moveAmount = 4; //speed we move
-
+    public boolean holdingkey = false;
     public void act() {
         moveWithKeys();
+        pickUpKey();
     }
 
     //I hope this is self explanatory.
@@ -38,6 +39,21 @@ public class Character extends Actor {
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
             super.setLocation(oldX, oldY);
+        }
+    }
+    
+    //Picking up keys
+    public void pickUpKey()
+    {
+        Actor k = getOneIntersectingObject(Key1.class);
+        Actor t = getOneIntersectingObject(Key2.class);
+        if ( k != null )
+        {
+            getWorld().removeObject(k);
+            holdingkey = true;
+        }
+        if ( t != null ){
+            getWorld().removeObject(t);
         }
     }
 }

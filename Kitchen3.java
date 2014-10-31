@@ -18,6 +18,7 @@ public class Kitchen3 extends SaviourLevel
         super(90, 70, 825, 200);
         prepareWalls();
         prepareObstacles();
+        addKeys();
     }
     
     public void prepareWalls()
@@ -28,9 +29,9 @@ public class Kitchen3 extends SaviourLevel
         //Top Left Horizontal Wall
          for (int i = 1; i < 10; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
-       }
+        }
         //Top Right Horizontal Wall pt 1
-        for (int i = 14; i <19 ; i++) {
+        for (int i = 15; i <19 ; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 30) * 9 - halfWall);
         }
         //Top Right Horizontal Wall pt 2
@@ -82,19 +83,29 @@ public class Kitchen3 extends SaviourLevel
     
     public void prepareObstacles()
     {
+        //All the middle arrows
         addObstacle(new Arrow(), 435, 165, true, 180);
         addObstacle(new Arrow(), 435, 225, true, 180);
         addObstacle(new Arrow(), 435, 285, true, 180);
         addObstacle(new Arrow(), 405, 465, true, 270);
         addObstacle(new Arrow(), 345, 465, true, 270);
         addObstacle(new Arrow(), 375, 465, true, 90);
+        //Only two spikes on the level
         addObstacle(new Spikes(2), 475, 345, false, 180);
         addObstacle(new Spikes(2), 575, 425, false);
-        addObstacle(new Spear(), 15, 415, false);
+        //Left side obstacles
+        addObstacle(new Spear(), 35, 390, false);
         addObstacle(new Acid(), 120, 345, false);
+        //Right side Obstacles
         addObstacle(new Arrow(), 585, 165, true, 270);
         addObstacle(new Arrow(), 675, 165, true, 270);
         addObstacle(new Spear(), 850, 375, false, 180);
         addObstacle(new Acid(), 725, 360, false);
+    }
+    
+    public void addKeys()
+    {
+        addObject(new Key1(), 800, 85);
+        addObject(new Key2(), 800, 525);
     }
 }
