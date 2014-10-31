@@ -5,7 +5,7 @@ import greenfoot.*;
  */
 public class SaviourWorld { 
    private static SaviourWorld instance = null;
-
+   public boolean haungsmode = false;
    public static SaviourWorld getInstance() {
       if(instance == null) {
          instance = new SaviourWorld();
@@ -35,5 +35,20 @@ public class SaviourWorld {
            case 7: return new SaviourWinScreen();
            default: return new SaviourIntroScreen();
         } 
+    }
+    
+    public void powerUp()
+    {
+        if (Greenfoot.isKeyDown("h")){
+            haungsmode = true;
+        }
+        if (Greenfoot.isKeyDown("y")) {
+            haungsmode = false;
+        }
+    }
+    
+    public boolean haungsMode()
+    {
+        return haungsmode;
     }
 }

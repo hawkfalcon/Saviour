@@ -12,10 +12,11 @@ public class Endpoint extends Actor {
      */
     public void act() {
         characterHitsEndpoint();
+        carryKey();
     }
 
     public void characterHitsEndpoint() {
-        if (holdingkey == true){
+        if (holdingkey){
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
                 getWorld().removeObject(c);
@@ -24,18 +25,11 @@ public class Endpoint extends Actor {
                 getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);            
             }
         }
-        if (holdingkey == false){
-            //do nothing
-        }
     }
     
     public void carryKey()
     {
-        if ( Key1.class != null )
-        {
-            holdingkey = false;
-        }
-        if ( Key1.class == null )
+        if ( getWorld().getObjects(Key1.class).isEmpty() )
         {
             holdingkey = true;
         }

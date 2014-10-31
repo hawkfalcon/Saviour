@@ -120,4 +120,5 @@ public class SaviourLevel extends World {
         obstacle.setRotation(rotation);
         addObstacle(obstacle, x, y);
     }
+    
 }

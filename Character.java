@@ -6,10 +6,10 @@ import greenfoot.*;
 
 public class Character extends Actor {
     int moveAmount = 4; //speed we move
-    public boolean holdingkey = false;
     public void act() {
         moveWithKeys();
         pickUpKey();
+        SaviourWorld.getInstance().powerUp();
     }
 
     //I hope this is self explanatory.
@@ -50,7 +50,6 @@ public class Character extends Actor {
         if ( k != null )
         {
             getWorld().removeObject(k);
-            holdingkey = true;
         }
         if ( t != null ){
             getWorld().removeObject(t);
