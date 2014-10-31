@@ -21,8 +21,7 @@ public class Dungeon1 extends SaviourLevel {
     }
 
     public void prepareWalls() {
-        //generates all the walls. 
-        //you could just place them and save the world.
+        
         //Middle Wall
         for (int i = 1; i < 15; i++) {
             if (getPos(i) != 255) {

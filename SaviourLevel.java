@@ -44,6 +44,18 @@ public class SaviourLevel extends World {
         //fade the world in
         //addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
+    
+    enum LevelType {DUNGEON, KITCHEN}
+    
+     /**
+     * Constructor for objects of class SaviourLevelManager.
+     */
+    public SaviourLevel(int xStart, int yStart, int xEnd, int yEnd, LevelType type) {
+        this(xStart, yStart, xEnd, yEnd);
+        if (type == LevelType.DUNGEON) {
+            setBackground(new GreenfootImage("floor.jpg"));
+        }
+    }
 
     /**
      * Prepare the world for the start of the program. That is: create the initial

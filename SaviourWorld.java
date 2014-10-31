@@ -23,7 +23,7 @@ public class SaviourWorld {
         currentLevel = 1;
     }
     
-    //todo implement
+    //to do implement
     public World getNextLevel() {
         switch (currentLevel) {
            case 1: return new Dungeon1();
