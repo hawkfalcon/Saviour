@@ -4,7 +4,7 @@ import greenfoot.*;
  * Easily create Obstacles
  */
 public class Obstacle extends Actor {
-    
+
     /**
      * Things you can use in an obstacle:
      * killer(); (kills on touch)
@@ -36,7 +36,7 @@ public class Obstacle extends Actor {
                 //restart level
                 getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             }
-            
+
         }
     }
 

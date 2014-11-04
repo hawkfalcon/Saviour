@@ -8,7 +8,7 @@ public class Dungeon3 extends SaviourLevel {
      * Constructor for objects of class Dungeon3.
      */
     public Dungeon3() {
-        super(90, 70, 675, 200);
+        super(90, 70, 675, 200, LevelType.DUNGEON);
         prepare();
     }
     

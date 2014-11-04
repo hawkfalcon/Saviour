@@ -3,8 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Bedroom3 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Manasi Nagtode (layout)
+ * @author Poojitha Karumanchi (obstacles)
+ * @version (a version number or a date) 
  */
 public class Bedroom3 extends SaviourLevel
 {
@@ -16,8 +17,16 @@ public class Bedroom3 extends SaviourLevel
     public Bedroom3()
     {
         super(90, 70, 675, 200);
+        prepare();
         setWalls();
     }
+    
+    public void prepare()
+    {
+        setWalls();
+        prepareObstacles();
+    }
+    
     public void setWalls()
     {
         //top horiz right wall
@@ -52,4 +61,27 @@ public class Bedroom3 extends SaviourLevel
         }
     }
     
+    public void prepareObstacles() {
+        
+        //Brick
+        
+        //Spear
+ 
+        
+        
+        //Acid
+        
+        
+        //Arrows
+        addObstacle(new Arrow(), 45, 525, true, 0);
+        addObstacle(new Arrow(), 345, 135);
+        addObstacle(new Arrow(), 345, 320);
+        
+        //Spikes
+       //addObstacle(new Spikes), 850,630);
+        
+    
+    
+    
+}
 }

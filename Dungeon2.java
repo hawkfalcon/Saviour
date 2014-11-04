@@ -3,7 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Dungeon2 here.
  * Layout of Dungeon 2
- * @author Manasi Nagtode
+ * @author Manasi Nagtode (layout)
+ * Obstacles of Dungeon 2
+ * @author Poojitha Karumanchi (obstacles)
  * @version 1 Oct 21, 2014
  */
 public class Dungeon2 extends SaviourLevel
@@ -15,7 +17,7 @@ public class Dungeon2 extends SaviourLevel
      */
     public Dungeon2()
     {
-        super(90, 70, 675, 200);
+        super(90, 70, 675, 200, LevelType.DUNGEON);
         prepare();
     }
 
