@@ -11,7 +11,7 @@ public class Dungeon1 extends SaviourLevel {
      */
     public Dungeon1() {
         //int xStart, int yStart, int xEnd, int yEnd
-        super(90, 70, 675, 200);
+        super(90, 70, 675, 200, LevelType.DUNGEON);
         prepare();
     }
 
