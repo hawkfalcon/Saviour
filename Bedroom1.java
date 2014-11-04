@@ -16,7 +16,7 @@ public class Bedroom1 extends SaviourLevel
      */
     public Bedroom1()
     {
-       super(90, 70, 675, 200, LevelType.BEDROOM);
+       super(90, 70, 675, 200);
         prepare(); 
     
     }
