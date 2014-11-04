@@ -16,7 +16,7 @@ public class Bedroom3 extends SaviourLevel
      */
     public Bedroom3()
     {
-        super(90, 70, 675, 200);
+        super(90, 70, 675, 200, LevelType.BEDROOM);
         prepare();
         setWalls();
     }
@@ -64,26 +64,64 @@ public class Bedroom3 extends SaviourLevel
     public void prepareObstacles() {
         
         //Brick
+
         addObstacle(new Brick(1), 300, 30, false,180);
         addObstacle(new Brick(1), 260, 460);
         addObstacle(new Brick(1), 370, 460);
+
+        addObstacle(new Brick(1), 610, 50, false, 90);
+        addObstacle(new Brick(1), 740, 50, false, 90);
+
+        addObstacle(new Brick(1), 300, 30, false,180);
+        addObstacle(new Brick(1), 260, 460);
+        addObstacle(new Brick(1), 370, 460);
+
+
         //Spear
  
         
         
         //Acid
+
         addObstacle(new Acid(), 50, 170); 
+
+
+      addObstacle(new Acid(), 765, 142);
+      addObstacle(new Acid(), 765, 180);
+      addObstacle(new Acid(), 765, 220);
+      addObstacle(new Acid(), 850, 440);
+      addObstacle(new Acid(), 850, 410);
+      addObstacle(new Acid(), 850, 370);
+      addObstacle(new Acid(), 850, 340);
+      
         
+
+        addObstacle(new Acid(), 50, 170); 
+
+
         //Arrows
         addObstacle(new Arrow(), 45, 525, true, 0);
         addObstacle(new Arrow(), 345, 135);
         addObstacle(new Arrow(), 345, 320);
         
         //Spikes
+
         addObstacle(new Spikes(1),  200, 320, false, 180);
         addObstacle(new Spikes(1),  270, 220, false, 0);
        //addObstacle(new Spikes), 850,630);
         
+
+       addObstacle(new Spikes(2), 500, 300, false,180); 
+       addObstacle(new Spikes(2), 570, 150, false, 0);
+
+        addObstacle(new Spikes(1),  200, 320, false, 180);
+        addObstacle(new Spikes(1),  270, 220, false, 0);
+
+       //addObstacle(new Spikes), 850,630);
+        
+
+    
+
     
     
 }
