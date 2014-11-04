@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Bedroom3 here.
  * 
- * @author Manasi Nagtode (layout)
+ * @author Manasi Nagtode (layout and some obstacles)
  * @author Poojitha Karumanchi (obstacles)
  * @version (a version number or a date) 
  */
@@ -64,23 +64,55 @@ public class Bedroom3 extends SaviourLevel
     public void prepareObstacles() {
         
         //Brick
+<<<<<<< HEAD
+        addObstacle(new Brick(1), 610, 50, false, 90);
+        addObstacle(new Brick(1), 740, 50, false, 90);
+=======
+<<<<<<< HEAD
+        addObstacle(new Brick(1), 300, 30, false,180);
+        addObstacle(new Brick(1), 260, 460);
+        addObstacle(new Brick(1), 370, 460);
+=======
+>>>>>>> FETCH_HEAD
         
-        
+>>>>>>> FETCH_HEAD
         //Spear
- 
         
         
         //Acid
+<<<<<<< HEAD
+      addObstacle(new Acid(), 765, 142);
+      addObstacle(new Acid(), 765, 180);
+      addObstacle(new Acid(), 765, 220);
+      addObstacle(new Acid(), 850, 440);
+      addObstacle(new Acid(), 850, 410);
+      addObstacle(new Acid(), 850, 370);
+      addObstacle(new Acid(), 850, 340);
+      
         
+=======
+        addObstacle(new Acid(), 50, 170); 
+>>>>>>> FETCH_HEAD
         
         //Arrows
         addObstacle(new Arrow(), 45, 525, true, 0);
         addObstacle(new Arrow(), 345, 135);
         addObstacle(new Arrow(), 345, 320);
+        addObstacle(new Arrow(), 500, 375);
         
         //Spikes
+<<<<<<< HEAD
+       addObstacle(new Spikes(2), 500, 300, false,180); 
+       addObstacle(new Spikes(2), 570, 150, false, 0);
+=======
+<<<<<<< HEAD
+        addObstacle(new Spikes(1),  200, 320, false, 180);
+        addObstacle(new Spikes(1),  270, 220, false, 0);
+=======
+       //addObstacle(new Spikes), 850,630);
         
-        
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
     
     
     
