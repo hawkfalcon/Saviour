@@ -64,9 +64,13 @@ public class Bedroom3 extends SaviourLevel
     public void prepareObstacles() {
         
         //Brick
+<<<<<<< HEAD
         addObstacle(new Brick(1), 300, 30, false,180);
         addObstacle(new Brick(1), 260, 460);
         addObstacle(new Brick(1), 370, 460);
+=======
+        
+>>>>>>> FETCH_HEAD
         //Spear
  
         
@@ -80,8 +84,13 @@ public class Bedroom3 extends SaviourLevel
         addObstacle(new Arrow(), 345, 320);
         
         //Spikes
+<<<<<<< HEAD
         addObstacle(new Spikes(1),  200, 320, false, 180);
         addObstacle(new Spikes(1),  270, 220, false, 0);
+=======
+       //addObstacle(new Spikes), 850,630);
+        
+>>>>>>> FETCH_HEAD
     
     
     

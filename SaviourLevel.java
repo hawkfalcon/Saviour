@@ -45,16 +45,14 @@ public class SaviourLevel extends World {
         //addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
     
-    enum LevelType {DUNGEON, KITCHEN}
+    enum LevelType {DUNGEON, KITCHEN, BEDROOM}
     
      /**
      * Constructor for objects of class SaviourLevelManager.
      */
     public SaviourLevel(int xStart, int yStart, int xEnd, int yEnd, LevelType type) {
         this(xStart, yStart, xEnd, yEnd);
-        if (type == LevelType.DUNGEON) {
-            setBackground(new GreenfootImage("floor.jpg"));
-        }
+        setBackground(new GreenfootImage("/backgrounds/" + type.toString().toLowerCase() + ".jpg"));         
     }
 
     /**
