@@ -4,6 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class Bedroom1 here.
  * 
  * @author Manasi Nagtode
+ * @author Poojitha Karumanchi
  * @version (a version number or a date)
  */
 public class Bedroom1 extends SaviourLevel
@@ -23,16 +24,27 @@ public class Bedroom1 extends SaviourLevel
     public void prepare()
     {
         prepareWalls();
+        prepareObstacles();
+        addKeys();
        
     }
     public void prepareWalls()
     {
         //1st vert wall
-        for (int i = 5; i < 15; i++) {
+        for (int i = 6; i < 8 ; i++) {
+            addObject(new Wall(), getWidth() / 6 + halfWall, getPos(i));
+        }
+        for (int i = 9; i < 11; i++) {
+            addObject(new Wall(), getWidth() / 6 + halfWall, getPos(i));
+        }
+        for (int i = 12; i < 14; i++) {
             addObject(new Wall(), getWidth() / 6 + halfWall, getPos(i));
         }
         //bottom horizontal wall
-        for (int i = 6; i < 25; i++) {
+        for (int i = 6; i < 15; i++) {
+            addObject(new Wall(), getPos(i), getHeight() - 180 + halfWall);
+        }
+        for (int i = 16; i < 25; i++) {
             addObject(new Wall(), getPos(i), getHeight() - 180 + halfWall);
         }
         //right vet wall
@@ -48,7 +60,7 @@ public class Bedroom1 extends SaviourLevel
             addObject(new Wall(), getWidth() / 3 + 50 + halfWall, getPos(i));
         }
         // top horiz wall
-        for (int i = 19; i < 25; i++) {
+        for (int i = 19; i < 24; i++) {
             addObject(new Wall(), getPos(i), getHeight() - 480 + halfWall);
         }
         for (int i = 8; i < 11; i++) {
@@ -62,5 +74,46 @@ public class Bedroom1 extends SaviourLevel
         }
     }
     
+ public void prepareObstacles() {
+     for (int i = 5; i < 15; i+=3) {
+        //Arrows 
+        addObstacle(new Arrow(), getWidth() / 6 + halfWall, getPos(i), true,180);
+        addObstacle(new Arrow(), 3*halfWall, getPos(17), true,0);
+        addObstacle(new Arrow(), 770, 430);
+        addObstacle(new Arrow(), 465, 430, false, -90);
+        addObstacle(new Arrow(), 735, 140); 
+      
+        //Bricks
+        addObstacle(new Brick(1), 510, 530);
+        addObstacle(new Brick(1), 165, 455);
+        addObstacle(new Brick(1), 735, 455);
+        addObstacle(new Brick(1), 860, 150);
+        
+        //Spikes
+        addObstacle(new Spikes(2), 500, 320);
+        addObstacle(new Spikes(2), 500, 280);
+        addObstacle(new Spikes(1), 400, 120, false, 180);
+        
+        //Acid
+       addObstacle(new Acid(), 200, 172);
+       addObstacle(new Acid(), 240, 172);
+       addObstacle(new Acid(), 280, 172);
+       addObstacle(new Acid(), 330, 285);
+       addObstacle(new Acid(), 280, 285);
+       addObstacle(new Acid(), 250, 285);
+       addObstacle(new Acid(), 200, 395);
+       addObstacle(new Acid(), 200, 400);
+   
+        
+        
+        //Spear
+        
+   
     }
+}
 
+public void addKeys()
+{
+    addObject(new Key1(), 600, 360);
+}
+}
