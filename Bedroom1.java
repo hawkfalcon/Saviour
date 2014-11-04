@@ -16,7 +16,7 @@ public class Bedroom1 extends SaviourLevel
      */
     public Bedroom1()
     {
-       super(90, 70, 675, 200);
+       super(90, 70, 675, 200, LevelType.BEDROOM);
         prepare(); 
     
     }
@@ -90,8 +90,7 @@ public class Bedroom1 extends SaviourLevel
         addObstacle(new Brick(1), 860, 150);
         
         //Spikes
-        addObstacle(new Spikes(2), 500, 320);
-        addObstacle(new Spikes(2), 500, 280);
+        addObstacle(new Spikes(2), 500, 180);
         addObstacle(new Spikes(1), 400, 120, false, 180);
         
         //Acid

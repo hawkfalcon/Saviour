@@ -65,7 +65,6 @@ public class Bedroom3 extends SaviourLevel
         
         //Brick
         
-        
         //Spear
  
         
@@ -79,7 +78,7 @@ public class Bedroom3 extends SaviourLevel
         addObstacle(new Arrow(), 345, 320);
         
         //Spikes
-        
+       //addObstacle(new Spikes), 850,630);
         
     
     
