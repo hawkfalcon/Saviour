@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
+#Tue Nov 04 10:15:05 PST 2014
+=======
 #Tue Nov 04 10:33:30 PST 2014
+>>>>>>> FETCH_HEAD
 class.Character.image=redknight.png
 target24.type=ClassTarget
 target16.name=Spear
@@ -12,6 +16,7 @@ target10.width=80
 dependency19.type=UsesDependency
 target26.editor.width=900
 dependency46.type=UsesDependency
+dependency98.type=UsesDependency
 dependency21.type=UsesDependency
 target12.editor.height=720
 class.SaviourLevel.superclass=greenfoot.World
@@ -27,6 +32,7 @@ target30.name=Bedroom2
 target6.editor.height=700
 dependency45.from=SaviourWorld
 target17.typeParameters=
+dependency97.from=Kitchen2
 dependency20.from=SaviourLevel
 dependency27.to=Startpoint
 dependency72.from=Endpoint
@@ -75,6 +81,7 @@ target26.editor.height=700
 target18.width=110
 dependency63.to=Kitchen1
 dependency47.type=UsesDependency
+dependency99.type=UsesDependency
 dependency22.type=UsesDependency
 dependency74.type=UsesDependency
 target17.y=70
@@ -83,6 +90,7 @@ target12.type=ClassTarget
 dependency57.to=Timer
 dependency19.from=SaviourLevel
 dependency46.from=SaviourWorld
+dependency98.from=Kitchen2
 dependency21.from=Dungeon1
 dependency73.from=Character
 target14.width=80
@@ -93,6 +101,7 @@ target14.height=50
 target2.showInterface=false
 target23.editor.height=700
 target23.typeParameters=
+dependency98.to=Arrow
 target28.showInterface=false
 dependency61.type=UsesDependency
 package.numTargets=30
@@ -134,7 +143,12 @@ target27.typeParameters=
 world.lastInstantiated=Kitchen3
 target23.y=370
 target23.x=10
+<<<<<<< HEAD
+dependency47.from=Dungeon3
+dependency99.from=Bedroom3
+=======
 dependency47.from=SaviourWorld
+>>>>>>> FETCH_HEAD
 dependency22.from=Fade
 dependency35.to=SaviourWorld
 target9.typeParameters=
@@ -152,6 +166,11 @@ dependency29.to=Dungeon1
 class.Kitchen3.image=Kitchenbackground.jpg
 dependency10.type=UsesDependency
 class.Bedroom2.superclass=SaviourLevel
+<<<<<<< HEAD
+target25.editor.y=22
+target25.editor.x=809
+=======
+>>>>>>> FETCH_HEAD
 dependency62.type=UsesDependency
 target26.naviview.expanded=true
 dependency76.to=Key1
@@ -235,8 +254,15 @@ dependency37.from=Dungeon1
 target18.editor.y=23
 target2.editor.height=700
 target18.editor.x=104
+<<<<<<< HEAD
+dependency95.to=Wall
+target15.y=190
+target15.x=190
+target26.width=90
+=======
 target15.y=430
 target15.x=100
+>>>>>>> FETCH_HEAD
 dependency2.from=Arrow
 target26.width=80
 target7.height=50
@@ -361,8 +387,16 @@ target16.width=80
 class.Kitchen2.superclass=SaviourLevel
 target6.height=50
 dependency27.type=UsesDependency
+<<<<<<< HEAD
+target12.editor.y=24
+target12.editor.x=170
+target25.editor.height=679
+dependency97.to=Acid
+dependency79.type=UsesDependency
+=======
 target12.editor.y=0
 target12.editor.x=609
+>>>>>>> FETCH_HEAD
 dependency54.type=UsesDependency
 target17.type=ClassTarget
 target22.editor.width=900
@@ -407,9 +441,14 @@ dependency6.type=UsesDependency
 target10.editor.height=700
 target24.showInterface=false
 dependency40.to=Wall
+<<<<<<< HEAD
+target13.y=490
+=======
 target13.y=430
 target13.x=190
+>>>>>>> FETCH_HEAD
 target25.name=Bedroom1
+target13.x=110
 target18.editor.width=900
 target20.typeParameters=
 class.Fade.superclass=greenfoot.Actor
@@ -453,8 +492,12 @@ dependency70.to=Wall
 dependency66.from=Kitchen1
 dependency6.to=Arrow
 dependency41.from=Dungeon2
-target10.editor.width=900
 target24.typeParameters=
+<<<<<<< HEAD
+target10.editor.width=900
+dependency93.from=Bedroom3
+=======
+>>>>>>> FETCH_HEAD
 target4.width=80
 target11.editor.width=900
 target2.name=Wall
@@ -471,6 +514,11 @@ target23.editor.width=900
 dependency58.to=Wall
 target29.naviview.expanded=true
 target24.editor.width=900
+<<<<<<< HEAD
+target28.editor.y=22
+target28.editor.x=835
+=======
+>>>>>>> FETCH_HEAD
 target29.height=50
 dependency6.from=SaviourWorld
 target11.width=100
@@ -489,6 +537,17 @@ target19.type=ClassTarget
 target13.editor.height=768
 dependency31.type=UsesDependency
 dependency1.to=Wall
+<<<<<<< HEAD
+dependency83.type=UsesDependency
+dependency99.to=Spikes
+target18.showInterface=false
+target21.type=ClassTarget
+mainWindow.y=22
+target13.name=Timer
+mainWindow.x=13
+target16.y=550
+target16.x=10
+=======
 target18.showInterface=false
 target21.type=ClassTarget
 mainWindow.y=-8
@@ -496,6 +555,7 @@ target13.name=Kitchen3
 mainWindow.x=54
 target16.y=190
 target16.x=190
+>>>>>>> FETCH_HEAD
 dependency28.from=SaviourLevel
 target7.editor.height=700
 dependency55.from=Kitchen1
@@ -508,6 +568,7 @@ dependency16.type=UsesDependency
 dependency68.type=UsesDependency
 dependency43.type=UsesDependency
 dependency47.to=Dungeon2
+dependency95.type=UsesDependency
 target28.typeParameters=
 dependency70.type=UsesDependency
 target15.showInterface=false
@@ -561,14 +622,27 @@ target3.showInterface=false
 dependency17.type=UsesDependency
 target24.editor.height=700
 dependency69.type=UsesDependency
+<<<<<<< HEAD
+target25.naviview.expanded=false
+target15.naviview.expanded=true
+dependency44.type=UsesDependency
+target29.showInterface=false
+target6.y=130
+dependency96.type=UsesDependency
+=======
 target15.naviview.expanded=false
 dependency44.type=UsesDependency
 target29.showInterface=false
 target6.y=130
 target12.editor.width=609
+>>>>>>> FETCH_HEAD
 target6.x=190
 dependency31.to=SaviourWorld
+<<<<<<< HEAD
+package.numDependencies=99
+=======
 package.numDependencies=77
+>>>>>>> FETCH_HEAD
 dependency71.type=UsesDependency
 target16.editor.y=33
 target16.editor.x=346
@@ -582,6 +656,7 @@ dependency68.from=Kitchen1
 target9.height=50
 dependency43.from=Dungeon2
 class.Key1.superclass=Key
+dependency95.from=Kitchen2
 target11.y=310
 target4.name=Key
 dependency70.from=Bedroom3
@@ -629,6 +704,7 @@ target28.width=80
 project.charset=UTF-8
 dependency55.to=Wall
 dependency45.type=UsesDependency
+dependency97.type=UsesDependency
 dependency20.type=UsesDependency
 target20.showInterface=false
 dependency72.type=UsesDependency
@@ -640,6 +716,12 @@ dependency69.from=Bedroom1
 target3.editor.y=34
 target3.editor.x=204
 dependency44.from=Endpoint
+<<<<<<< HEAD
+target30.editor.width=900
+dependency96.from=Kitchen2
+dependency96.to=Spear
+=======
+>>>>>>> FETCH_HEAD
 target15.height=50
 target5.name=Arrow
 dependency71.from=Bedroom2
