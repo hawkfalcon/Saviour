@@ -40,14 +40,19 @@ public class Kitchen2 extends SaviourLevel
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
         }
         //Left bottom horizontal wall
-        for (int i = 9; i < 25; i++)
-        {
-            addObject(new Wall(), getPos(i),(getHeight() / 29) * 24 - halfWall);
-        }
-        //Far left bottom horizontal wall
         for (int i = 5; i < 8; i++)
         {
             addObject(new Wall(), getPos(i),(getHeight() / 29) * 24 - halfWall);
+        }
+        //Mid left bottom horizontal wall
+        for (int i = 9; i < 18; i++)
+        {
+            addObject(new Wall(), getPos(i),(getHeight() / 29) * 24 - halfWall);
+        }
+        //Right bottom horizontal wall
+        for (int i = 19; i < 25; i++)
+        {
+            addObject(new Wall(), getPos(i), (getHeight() / 29) * 24 - halfWall);  
         }
         //Left vertical wall
         for (int i = 8; i < 15; i ++)
@@ -98,5 +103,10 @@ public class Kitchen2 extends SaviourLevel
         addObstacle(new Arrow(), 255, 465, true, 270);
         addObstacle(new Arrow(), 375, 135, true, 90);
         addObstacle(new Arrow(), 555, 465, true, 270);
+        
+        //add spikes
+        addObstacle(new Spikes(1), 845, 195, false);
+        addObstacle(new Spikes(2), 753, 300, false, 180);
+        addObstacle(new Spikes(3), 845, 445, false);
     }
 }
