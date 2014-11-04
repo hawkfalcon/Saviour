@@ -14,7 +14,7 @@ public class Kitchen2 extends SaviourLevel
      */
     public Kitchen2()
     {
-        super(90, 70, 675, 200);
+        super(90, 70, 675, 200, LevelType.KITCHEN);
         prepare();
     }
 
