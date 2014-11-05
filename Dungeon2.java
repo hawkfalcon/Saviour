@@ -17,7 +17,7 @@ public class Dungeon2 extends SaviourLevel
      */
     public Dungeon2()
     {
-        super(90, 70, 675, 200, LevelType.DUNGEON);
+        super(90, 70, 665, 200, LevelType.DUNGEON);
         prepare();
     }
 
