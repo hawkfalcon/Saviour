@@ -18,6 +18,7 @@ public class Boss extends SaviourLevel
         prepare();
         prepareWalls();
         prepareObstacles();
+        spawnKey();
     }
     
     public void prepare()

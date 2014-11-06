@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Write a description of class King here.
  *
- * @author (your name)
+ * @Dane Low
  * @version (a version number or a date)
  */
 public class King extends Actor {
