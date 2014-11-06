@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Boss here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Dane created obstacles + layout
+ * Leighton edited layout + obstacles
  */
 public class Boss extends SaviourLevel
 {
@@ -16,14 +16,17 @@ public class Boss extends SaviourLevel
     {
         super(450, 450, 450, 100, LevelType.KITCHEN);
         prepare();
-        prepareWalls();
-        prepareObstacles();
+        
     }
     
     public void prepare()
     {
         Actor king = new King();
         addObject(king, 450, 150);
+        prepareWalls();
+        prepareObstacles();
+        spawnKeys();
+        kingsDeath();
     }
     
     public void prepareWalls()
@@ -33,7 +36,7 @@ public class Boss extends SaviourLevel
             addObject(new Wall(), (getWidth() / 30) * 5 + halfWall, getPos(i));
         }
         //Middle Left Vertical Wall Pt. 1
-        for (int i = 5; i < 7; i++) {
+        for (int i = 1; i < 7; i++) {
             addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
         }
         //Middle Left Vertical Wall Pt. 2
@@ -41,7 +44,7 @@ public class Boss extends SaviourLevel
             addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
         }
         //Middle Left Vertical Wall Pt. 3
-        for (int i = 14; i < 16; i++){
+        for (int i = 14; i < 15; i++){
             addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
         }
         //Right Vertical Wall
@@ -49,12 +52,22 @@ public class Boss extends SaviourLevel
             addObject(new Wall(), (getWidth() / 30) * 25 + halfWall, getPos(i));
         }
         //Middle Right Vertical Wall Pt. 1
-        for (int i = 5; i < 10; i++) {
+        for (int i = 1; i < 10; i++) {
             addObject(new Wall(), (getWidth() / 3) * 2 + halfWall, getPos(i));
         }
         //Middle Right Vertical Wall Pt. 2
-        for (int i = 11; i < 16; i++) {
+        for (int i = 11; i < 15; i++) {
             addObject(new Wall(), (getWidth() / 3) * 2 + halfWall, getPos(i));
+        }
+        //Horizontal Top Wall Left
+        for (int i = 11; i < 14; i++)
+        {
+            addObject(new Wall(), getPos(i), (getHeight()/3) - halfWall);
+        }
+        //Horizontal Top Wall Right
+        for (int i = 17; i < 20; i++)
+        {
+            addObject(new Wall(), getPos(i), (getHeight()/ 3) - halfWall);  
         }
     }
     
@@ -66,12 +79,8 @@ public class Boss extends SaviourLevel
         addObstacle(new Arrow(), 615, 315, true, 180);
         
         //Spears on Bottom
-        addObstacle(new Spear(), 315, 465, false, 90);
-        addObstacle(new Spear(), 615, 465, false, 90);
-        
-        //Spears on Top
-        addObstacle(new Spear(), 315, 135, false, 270);
-        addObstacle(new Spear(), 615, 135, false, 270);
+        addObstacle(new Spear(), 315, 435, false, 90);
+        addObstacle(new Spear(), 615, 435, false, 90);
         
         //Spikes on Left
         addObstacle(new Spikes(1), 275, 285, false);
@@ -82,7 +91,13 @@ public class Boss extends SaviourLevel
         addObstacle(new Spikes(1), 730, 375, false);
     }
     
-    public void spawnKey()
+    public void spawnKeys()
+    {
+        addObject(new Key1(), 232, 326);
+        addObject(new Key2(), 694, 324);
+    }
+    
+    public void kingsDeath()
     {
         //King dies and you get the key to save your lover
         if (getObjects(King.class) == null)
