@@ -11,19 +11,17 @@ public class Dungeon3 extends SaviourLevel {
         super(90, 70, 675, 200, LevelType.DUNGEON);
         prepare();
     }
-    
-    public void prepare()
-    {
+
+    public void prepare() {
         prepareWalls();
         prepareObstacles();
     }
-    
-    public void prepareWalls()
-    {
+
+    public void prepareWalls() {
         //generates all the walls. 
-               
+
         //Top Left Wall Horizontal Wall
-         for (int i = 1; i < 5; i++) {
+        for (int i = 1; i < 5; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
         }
         //Bottom Left Horizontal Wall
@@ -66,29 +64,28 @@ public class Dungeon3 extends SaviourLevel {
         addObject(new Wall(), 525, 480);
         addObject(new Wall(), 645, 575);
     }
-    
+
     //adds the obstacles
-    public void prepareObstacles()
-    {
+    public void prepareObstacles() {
         //adds spikes
         addObstacle(new Spikes(1), 848, 450);
         addObstacle(new Spikes(2), 758, 315, false, 180);
-        addObstacle (new Spikes(3), 843, 186);
-                
+        addObstacle(new Spikes(3), 843, 186);
+
         //adds arrows
         addObstacle(new Arrow(), 165, 465, true);
         addObstacle(new Arrow(), 45, 525, true, 0);
         addObstacle(new Arrow(), 165, 315, true, 180);
         addObstacle(new Arrow(), 165, 135, true);
-        
+
         //adds spears
-        
-        addObstacle(new Spear(), 315, 465, false, 90); 
-        addObstacle(new Spear(), 465, 155, false, 270); 
-        
+
+        addObstacle(new Spear(), 315, 465, false, 90);
+        addObstacle(new Spear(), 465, 155, false, 270);
+
         //adds acid
         addObstacle(new Acid(), 420, 360);
-        
+
         //adds bricks
         addObstacle(new Brick(1), 495, 185);
         addObstacle(new Brick(2), 705, 275);

@@ -44,18 +44,18 @@ public class SaviourLevel extends World {
         //fade the world in
         //addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
-    
+
     enum LevelType {DUNGEON, KITCHEN, BEDROOM}
-    
-     /**
+
+    /**
      * Constructor for objects of class SaviourLevelManager.
      */
     public SaviourLevel(int xStart, int yStart, int xEnd, int yEnd, LevelType type) {
         this(xStart, yStart, xEnd, yEnd);
         setBackground(new GreenfootImage(/*"/backgrounds/" +*/ type.toString().toLowerCase() + ".jpg"));
         //if (type == LevelType.DUNGEON) {
-            getBackground().setTransparency(200);
-      //  }
+        getBackground().setTransparency(200);
+        //}
     }
 
     /**
@@ -121,5 +121,5 @@ public class SaviourLevel extends World {
         obstacle.setRotation(rotation);
         addObstacle(obstacle, x, y);
     }
-    
+
 }

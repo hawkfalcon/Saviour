@@ -6,6 +6,7 @@ import greenfoot.*;
 
 public class Character extends Actor {
     int moveAmount = 4; //speed we move
+
     public void act() {
         moveWithKeys();
         pickUpKey();
@@ -26,7 +27,7 @@ public class Character extends Actor {
         if (Greenfoot.isKeyDown("down")) {
             setLocation(getX(), getY() + moveAmount);
         }
-       
+
     }
 
     //We override the setLocation to take into account solid actors.
@@ -41,7 +42,7 @@ public class Character extends Actor {
             super.setLocation(oldX, oldY);
         }
     }
-    
+
     //Picking up keys
     public void pickUpKey() {
         Actor k = getOneIntersectingObject(Key1.class);
@@ -49,13 +50,13 @@ public class Character extends Actor {
         if (k != null) {
             getWorld().removeObject(k);
         }
-        if (t != null){
+        if (t != null) {
             getWorld().removeObject(t);
         }
     }
-    
+
     public void checkHaungsMode() {
-        if (Greenfoot.isKeyDown("h")){
+        if (Greenfoot.isKeyDown("h")) {
             SaviourWorld.getInstance().setHaungsMode(true);
         }
         if (Greenfoot.isKeyDown("y")) {
