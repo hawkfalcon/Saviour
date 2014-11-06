@@ -52,7 +52,10 @@ public class SaviourLevel extends World {
      */
     public SaviourLevel(int xStart, int yStart, int xEnd, int yEnd, LevelType type) {
         this(xStart, yStart, xEnd, yEnd);
-        setBackground(new GreenfootImage(/*"/backgrounds/" +*/ type.toString().toLowerCase() + ".jpg"));         
+        setBackground(new GreenfootImage(/*"/backgrounds/" +*/ type.toString().toLowerCase() + ".jpg"));
+        if (type == LevelType.DUNGEON) {
+            getBackground().setTransparency(200);
+        }
     }
 
     /**
