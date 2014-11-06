@@ -1,11 +1,23 @@
-SAVIOUR!
+Game Of Loans Group #6
 
-GAME FOR CPE123 AT CAL POLY
+Manasi Nagtode
+Leighton Villanueva
+Dane Low
+Tristen Miller
+Poojitha Karumanchi 
 
-GAME OF LOANS GROUP # 6
 
-VERSION 0.01
+Game Design:
 
-AUTHORS:
+Objective: To dodge obstacles and pass levels to save a person who is locked up on the top floor of a castle.
 
-Tristen, Poojitha, Dane, Leighton, Manasi
+Goals: Try to get the fastest time possible for each level, don’t die, kill the boss, avoid obstacle.
+
+ 
+About the Game:
+
+Currently contains three floors with three levels each. 
+Last level is a boss level.
+Implements a counter that tracks time.
+Uses keys and routes to create complexity
+

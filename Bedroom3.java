@@ -60,7 +60,8 @@ public class Bedroom3 extends SaviourLevel
         }
     }
 
-    public void prepareObstacles() {
+    public void prepareObstacles() {        
+
         //Brick
         addObstacle(new Brick(1), 300, 30, false,180);
         addObstacle(new Brick(1), 260, 460);
@@ -73,9 +74,15 @@ public class Bedroom3 extends SaviourLevel
         addObstacle(new Brick(1), 260, 460);
         addObstacle(new Brick(1), 370, 460);
 
-        //Spear
-        
-        //Acid
+
+
+
+        addObstacle(new Brick(1), 300, 30, false,180);
+        addObstacle(new Brick(1), 260, 460);
+        addObstacle(new Brick(1), 370, 460);
+
+
+
         addObstacle(new Acid(), 50, 170); 
 
         addObstacle(new Acid(), 765, 142);
@@ -89,22 +96,46 @@ public class Bedroom3 extends SaviourLevel
 
         addObstacle(new Acid(), 50, 170); 
 
+
         //Arrows
         addObstacle(new Arrow(), 45, 525, true);
         addObstacle(new Arrow(), 345, 135,true);
         addObstacle(new Arrow(), 345, 314, true);
+
+
+
+        addObstacle(new Acid(), 50, 170);         
+
+        //Arrows
+        addObstacle(new Arrow(), 45, 525, true, 0);
+        addObstacle(new Arrow(), 345, 135);
+        addObstacle(new Arrow(), 345, 320);       
+        //Spikes
+
+
+        addObstacle(new Spikes(1),  200, 320, false, 180);
+        addObstacle(new Spikes(1),  270, 220, false, 0);
+       //addObstacle(new Spikes), 850,630);
+        
 
         //Spikes
         addObstacle(new Spikes(1),  200, 335, false, 180);
         addObstacle(new Spikes(1),  270, 210, false, 0);
         //addObstacle(new Spikes), 850,630);
 
+
         addObstacle(new Spikes(2), 500, 300, false,180); 
         addObstacle(new Spikes(2), 570, 150, false, 0);
 
         //addObstacle(new Spikes), 850,630);
 
+        addObstacle(new Spikes(1),  200, 320, false, 180);
+        addObstacle(new Spikes(1),  270, 220, false, 0);
+        //addObstacle(new Spikes), 850,630);
     
     
     }
-}
+  }     
+
+
+
