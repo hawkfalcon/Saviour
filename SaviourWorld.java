@@ -32,7 +32,11 @@ public class SaviourWorld {
            case 4: return new Kitchen1();
            case 5: return new Kitchen2();
            case 6: return new Kitchen3();
-           case 7: return new SaviourWinScreen();
+           case 7: return new Bedroom1();
+           case 8: return new Bedroom2();
+           case 9: return new Bedroom3();
+           case 10: return new Boss();
+           case 11: return new SaviourWinScreen();
            default: return new SaviourIntroScreen();
         } 
     }
