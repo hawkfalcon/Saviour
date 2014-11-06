@@ -45,8 +45,7 @@ public class SaviourWorld {
         this.haungsmode = haungsmode;
     }
     
-    public boolean haungsMode()
-    {
+    public boolean haungsMode() {
         return haungsmode;
     }
 }
