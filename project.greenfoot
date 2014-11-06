@@ -1,18 +1,18 @@
 #Greenfoot properties
-#Wed Nov 05 16:18:55 PST 2014
+#Thu Nov 06 09:29:07 PST 2014
 class.Acid.superclass=Obstacle
 class.Kitchen3.superclass=SaviourLevel
 class.Spikes.image=spikes.png
-class.SaviourIntroScreen.image=SAVIOUR.jpg
 class.SaviourWinScreen.image=wall.png
 class.Launcher.superclass=Solid
+class.SaviourIntroScreen.image=SAVIOUR.jpg
 class.Bedroom2.superclass=SaviourLevel
 class.Arrow.superclass=Obstacle
 class.Character.image=character.png
 class.Dungeon2.superclass=SaviourLevel
 class.SaviourLevel.superclass=greenfoot.World
-class.Startpoint.image=start.png
 class.Spear.superclass=Obstacle
+class.Startpoint.image=start.png
 class.Key1.superclass=Key
 class.Wall.superclass=Solid
 class.Brick.image=brick.png
@@ -21,8 +21,8 @@ class.Boss.superclass=SaviourLevel
 class.Kitchen2.superclass=SaviourLevel
 class.SaviourIntroScreen.superclass=greenfoot.World
 class.Wall.image=wall.png
-class.Acid.image=acid.png
 class.SaviourWinScreen.superclass=greenfoot.World
+class.Acid.image=acid.png
 class.King.image=man.png
 class.Key2.image=key.png
 class.Key1.image=key.png
@@ -43,9 +43,9 @@ world.lastInstantiated=Boss
 class.Dungeon3.superclass=SaviourLevel
 class.Arrow.image=arrow.png
 class.Spikes.superclass=Obstacle
-class.Solid.superclass=greenfoot.Actor
 class.Endpoint.superclass=greenfoot.Actor
+class.Solid.superclass=greenfoot.Actor
 version=2.6.0
-class.Startpoint.superclass=greenfoot.Actor
 class.Key2.superclass=Key
+class.Startpoint.superclass=greenfoot.Actor
 class.Kitchen1.superclass=SaviourLevel
