@@ -19,6 +19,7 @@ public class King extends Actor
         charge();
         kill();
         move(1);
+        die();
     }    
     
     public void detect()
@@ -48,7 +49,16 @@ public class King extends Actor
     
     public void kill()
     {
-        
+        if (SaviourWorld.getInstance().haungsMode() == false)
+        {
+            Actor c = getOneIntersectingObject(Character.class);
+            if (c !=null)
+            {
+                getWorld().removeObject(c);
+                SaviourWorld sw = SaviourWorld.getInstance();
+                getWorld().addObject(new Fade(sw.getNextLevel(),true),getWorld().getWidth()/2,getWorld().getHeight()/2);
+            }
+        }
     }
     
     public void setLocation(int x, int y) {
@@ -60,5 +70,10 @@ public class King extends Actor
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
             super.setLocation(oldX, oldY);
         }
+    }
+    
+    public void die()
+    {
+        
     }
 }

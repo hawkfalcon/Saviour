@@ -5,7 +5,7 @@ import greenfoot.*;
  */
 public class Endpoint extends Actor {
     public boolean holdingkey = false;
-    
+
     /**
      * Act - do whatever the Endpoint wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,27 +16,24 @@ public class Endpoint extends Actor {
     }
 
     public void characterHitsEndpoint() {
-        if (holdingkey){
+        if (holdingkey) {
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
                 getWorld().removeObject(c);
                 SaviourWorld sw = SaviourWorld.getInstance();
                 sw.levelup();
-                getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);            
+                getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             }
         }
     }
-    
-    public void carryKey()
-    {
-        if ( getWorld().getObjects(Key1.class).isEmpty() )
-        {
+
+    public void carryKey() {
+        if (getWorld().getObjects(Key1.class).isEmpty()) {
             holdingkey = true;
         }
     }
-    
-    public boolean haveKey()
-    {
+
+    public boolean haveKey() {
         return holdingkey;
     }
 }
