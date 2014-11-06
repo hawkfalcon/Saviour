@@ -2,6 +2,7 @@ import greenfoot.*;
 
 /**
  * Fade effect between worlds and death.
+ * @author Tristen
  */
 public class Fade extends Actor {
     boolean fadeIn = true;

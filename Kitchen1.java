@@ -1,39 +1,22 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
- * Write a description of class Kitchen1 here.
- * 
- * @Dane & Leighton 
- * @10.28.14
- * Dane did Wall Construction
- * Leighton made Obstacles
+ * @author Dane (Layout)
+ * @author Leighton (Obstacle)
  */
-public class Kitchen1 extends SaviourLevel
-{
+public class Kitchen1 extends SaviourLevel {
 
-    /**
-     * Constructor for objects of class Kitchen1.
-     * 
-     */
-    public Kitchen1()
-    {
+    public Kitchen1() {
         super(90, 70, 675, 200, LevelType.KITCHEN);
         prepare();
     }
-    
-    public void prepare()
-    {
+
+    public void prepare() {
         prepareWalls();
         prepareObstacles();
     }
-    
-    public void prepareWalls()
-    {
-        //generates all the walls. 
-        //you could just place them and save the world.
-        
+
+    public void prepareWalls() {
         //Top Horizontal Wall
-         for (int i = 1; i < 25; i++) {
+        for (int i = 1; i < 25; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
         }
         //Bottom Left Vertical Wall
@@ -73,25 +56,23 @@ public class Kitchen1 extends SaviourLevel
             addObject(new Wall(), getPos(i), (getHeight() / 30) * 12 + halfWall);
         }
     }
-    
-    //adds the obstacles
-    public void prepareObstacles()
-    {
+
+    public void prepareObstacles() {
         //adds the arrows
         addObstacle(new Arrow(), 195, 315, true, 90);
         addObstacle(new Arrow(), 285, 315, true, 90);
         addObstacle(new Arrow(), 465, 285, true, 180);
         addObstacle(new Arrow(), 465, 165, true, 180);
-        
+
         //adds the walls
         addObject(new Wall(), 240, 496);
         addObject(new Wall(), 240, 525);
         addObject(new Wall(), 240, 555);
-        
+
         //adds spears
         addObstacle(new Spear(), 735, 465, false, 90);
         addObstacle(new Spear(), 50, 345, false);
-        
+
         //adds acids
         addObstacle(new Acid(), 123, 280);
         addObstacle(new Acid(), 174, 280);
@@ -99,7 +80,7 @@ public class Kitchen1 extends SaviourLevel
         addObstacle(new Acid(), 354, 322);
         addObstacle(new Acid(), 283, 215);
         addObstacle(new Acid(), 283, 171);
-        
+
         //adds spikes
         addObstacle(new Spikes(1), 850, 285);
         addObstacle(new Spikes(2), 750, 350, false, 180);

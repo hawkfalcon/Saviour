@@ -1,14 +1,10 @@
 /**
- * The first level
- *
- * @author Tristen Miller
+ * @author Tristen Miller (Layout)
+ * @author Tristen Miller (Obstacle)
  */
 
 public class Dungeon1 extends SaviourLevel {
 
-    /**
-     * Constructor for objects of class Dungeon1.
-     */
     public Dungeon1() {
         //int xStart, int yStart, int xEnd, int yEnd
         super(90, 70, 675, 200, LevelType.DUNGEON);
@@ -21,7 +17,6 @@ public class Dungeon1 extends SaviourLevel {
     }
 
     public void prepareWalls() {
-        
         //Middle Wall
         for (int i = 1; i < 15; i++) {
             if (getPos(i) != 255) {
@@ -53,11 +48,15 @@ public class Dungeon1 extends SaviourLevel {
     //add the obstacles
     //addObstacle(Obstacle obstacle, int x, int y, boolean launcher, int rotation);
     public void prepareObstacles() {
+        //adds arrows
         addObstacle(new Arrow(), 165, 465, true);
         addObstacle(new Arrow(), 465, 255, true, 180);
+        
+        //adds spear
         addObstacle(new Spear(), 465, 465, true, 90);
+        
+        //adds spikes
         addObstacle(new Spikes(2), 573, 300);
         addObstacle(new Spikes(1), 480, 240, false, 180);
     }
-
 }

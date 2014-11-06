@@ -1,33 +1,28 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * Write a description of class Bedroom2 here.
- * 
+ *
  * @author Manasi Nagtode (layout)
  * @author Poojitha Karumanchi (obstacles)
  * @version (a version number or a date)
  */
-public class Bedroom2 extends SaviourLevel
-{
+public class Bedroom2 extends SaviourLevel {
 
     /**
      * Constructor for objects of class Bedroom2.
-     * 
      */
-    public Bedroom2()
-    {
-        super(90, 70, 675, 200,LevelType.BEDROOM);
+    public Bedroom2() {
+        super(90, 70, 675, 200, LevelType.BEDROOM);
         prepare();
     }
 
-    public void prepare()
-    {
+    public void prepare() {
         prepareWalls();
         prepareObstacles();
     }
 
-    public void prepareWalls()
-    {
+    public void prepareWalls() {
         // top horiz wall
         for (int i = 1; i < 25; i++) {
             addObject(new Wall(), getPos(i), getHeight() - 480 + halfWall);
@@ -42,20 +37,19 @@ public class Bedroom2 extends SaviourLevel
         }
         //left vert wall
         for (int i = 9; i < 15; i++) {
-            addObject(new Wall(), getWidth() /6 + halfWall, getPos(i));
+            addObject(new Wall(), getWidth() / 6 + halfWall, getPos(i));
         }
         for (int i = 5; i < 7; i++) {
-            addObject(new Wall(), getWidth() /3 + halfWall, getPos(i));
+            addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
         }
-        for (int i = 8; i < 10; i++)
-        {
-            addObject(new Wall(), getWidth()/3 + halfWall, getPos(i));
+        for (int i = 8; i < 10; i++) {
+            addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
         }
         for (int i = 9; i < 15; i++) {
-            addObject(new Wall(), getWidth() /2 + halfWall, getPos(i));
+            addObject(new Wall(), getWidth() / 2 + halfWall, getPos(i));
         }
         for (int i = 5; i < 10; i++) {
-            addObject(new Wall(), getWidth() /2 + 130 + halfWall, getPos(i));
+            addObject(new Wall(), getWidth() / 2 + 130 + halfWall, getPos(i));
         }
     }
 
@@ -63,7 +57,7 @@ public class Bedroom2 extends SaviourLevel
 
         //Brick
         addObstacle(new Brick(1), 165, 30);
-        addObstacle(new Brick(1), 345, 30, false,180);
+        addObstacle(new Brick(1), 345, 30, false, 180);
         addObstacle(new Brick(1), 524, 30, false, 180);
         addObstacle(new Brick(1), 615, 30, false, 180);
         addObstacle(new Brick(1), 594, 300, false, 180);
@@ -75,10 +69,10 @@ public class Bedroom2 extends SaviourLevel
         addObstacle(new Spear(), 615, 15, false, 90);
 
         //Acid
-        addObstacle(new Acid(), 775, 142); 
+        addObstacle(new Acid(), 775, 142);
         addObstacle(new Acid(), 775, 185);
         addObstacle(new Acid(), 850, 290);
-        addObstacle(new Acid(), 850, 330); 
+        addObstacle(new Acid(), 850, 330);
         addObstacle(new Acid(), 850, 550);
         addObstacle(new Acid(), 45, 550);
         addObstacle(new Acid(), 320, 470);
@@ -96,6 +90,6 @@ public class Bedroom2 extends SaviourLevel
         addObstacle(new Spikes(2), 50, 210, false, 180);
 
     }
-    
+
 }
 
