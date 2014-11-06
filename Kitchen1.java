@@ -1,17 +1,9 @@
-import greenfoot.*;
-
 /**
- * Write a description of class Kitchen1 here.
- *
- * @Dane & Leighton
- * @10.28.14 Dane did Wall Construction
- * Leighton made Obstacles
+ * @author Dane (Layout)
+ * @author Leighton (Obstacle)
  */
 public class Kitchen1 extends SaviourLevel {
 
-    /**
-     * Constructor for objects of class Kitchen1.
-     */
     public Kitchen1() {
         super(90, 70, 675, 200, LevelType.KITCHEN);
         prepare();
@@ -23,9 +15,6 @@ public class Kitchen1 extends SaviourLevel {
     }
 
     public void prepareWalls() {
-        //generates all the walls. 
-        //you could just place them and save the world.
-
         //Top Horizontal Wall
         for (int i = 1; i < 25; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
@@ -68,7 +57,6 @@ public class Kitchen1 extends SaviourLevel {
         }
     }
 
-    //adds the obstacles
     public void prepareObstacles() {
         //adds the arrows
         addObstacle(new Arrow(), 195, 315, true, 90);

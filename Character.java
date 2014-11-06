@@ -2,6 +2,7 @@ import greenfoot.*;
 
 /**
  * Your character. Basic ARROW KEY movement.
+ * @Author Tristen
  */
 
 public class Character extends Actor {
@@ -55,6 +56,7 @@ public class Character extends Actor {
         }
     }
 
+    //sets haungs mode. @author Dane
     public void checkHaungsMode() {
         if (Greenfoot.isKeyDown("h")) {
             SaviourWorld.getInstance().setHaungsMode(true);

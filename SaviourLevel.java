@@ -2,7 +2,6 @@ import greenfoot.*;
 
 /**
  * The main game world: SaviourWorld
- *
  * @author Tristen Miller
  */
 public class SaviourLevel extends World {
@@ -42,7 +41,7 @@ public class SaviourLevel extends World {
         //make sure the black fade is in front
         setPaintOrder(Fade.class, Solid.class);
         //fade the world in
-        //addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
+        addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
 
     enum LevelType {DUNGEON, KITCHEN, BEDROOM}
@@ -121,5 +120,4 @@ public class SaviourLevel extends World {
         obstacle.setRotation(rotation);
         addObstacle(obstacle, x, y);
     }
-
 }

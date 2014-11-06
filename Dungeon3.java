@@ -1,12 +1,10 @@
+/**
+ * @author Dane (Layout)
+ * @author Leighton (Obstacle)
+ */
+    
 public class Dungeon3 extends SaviourLevel {
-    /**
-     * Author@ Dane Low
-     * Dane constructed this World
-     * Leighton added Obstacles all up in this World
-     */
-    /**
-     * Constructor for objects of class Dungeon3.
-     */
+    
     public Dungeon3() {
         super(90, 70, 675, 200, LevelType.DUNGEON);
         prepare();
@@ -18,8 +16,6 @@ public class Dungeon3 extends SaviourLevel {
     }
 
     public void prepareWalls() {
-        //generates all the walls. 
-
         //Top Left Wall Horizontal Wall
         for (int i = 1; i < 5; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
@@ -60,12 +56,13 @@ public class Dungeon3 extends SaviourLevel {
         for (int i = 19; i < 25; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 30) * 12 + halfWall);
         }
+       
+        //Add walls
         addObject(new Wall(), 406, 572);
         addObject(new Wall(), 525, 480);
         addObject(new Wall(), 645, 575);
     }
 
-    //adds the obstacles
     public void prepareObstacles() {
         //adds spikes
         addObstacle(new Spikes(1), 848, 450);
@@ -91,4 +88,3 @@ public class Dungeon3 extends SaviourLevel {
         addObstacle(new Brick(2), 705, 275);
     }
 }
-

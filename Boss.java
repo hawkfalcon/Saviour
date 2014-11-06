@@ -1,33 +1,23 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * Write a description of class Boss here.
- * 
- * @Dane Low, Obstacles and Wall Construction
- * @version (a version number or a date)
+ * @author Dane Low, Obstacles and Wall Construction
  */
-public class Boss extends SaviourLevel
-{
-    /**
-     * Constructor for objects of class Boss.
-     * 
-     */
-    public Boss()
-    {
+public class Boss extends SaviourLevel {
+
+    public Boss() {
         super(450, 450, 450, 100, LevelType.KITCHEN);
         prepare();
         prepareWalls();
         prepareObstacles();
     }
     
-    public void prepare()
-    {
+    public void prepare() {
         Actor king = new King();
         addObject(king, 450, 150);
     }
     
-    public void prepareWalls()
-    {
+    public void prepareWalls() {
         //Left Vertical Wall
         for (int i = 7; i < 14; i++) {
             addObject(new Wall(), (getWidth() / 30) * 5 + halfWall, getPos(i));
@@ -58,8 +48,7 @@ public class Boss extends SaviourLevel
         }
     }
     
-    public void prepareObstacles()
-    {
+    public void prepareObstacles() {
         //Triple Arrows in Middle
         addObstacle(new Arrow(), 315, 405, true);
         addObstacle(new Arrow(), 315, 225, true);
@@ -82,11 +71,9 @@ public class Boss extends SaviourLevel
         addObstacle(new Spikes(1), 730, 375, false);
     }
     
-    public void spawnKey()
-    {
+    public void spawnKey() {
         //King dies and you get the key to save your lover
-        if (getObjects(King.class) == null)
-        {
+        if (getObjects(King.class) == null) {
             Actor key1 = new Key1();
             addObject(key1, 450, 450);
         }

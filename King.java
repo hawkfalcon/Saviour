@@ -1,18 +1,12 @@
 import greenfoot.*;
 
 /**
- * Write a description of class King here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * @Author Dane
  */
+
 public class King extends Actor {
     public int timer = 0;
 
-    /**
-     * Act - do whatever the King wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() {
         detect();
         charge();
@@ -40,7 +34,7 @@ public class King extends Actor {
     }
 
     public void kill() {
-
+       //TODO WHAT DOES HE DO
     }
 
     public void setLocation(int x, int y) {

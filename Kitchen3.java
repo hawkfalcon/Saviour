@@ -1,15 +1,10 @@
-import greenfoot.*;
-
 /**
- * Write a description of class Kitchen3 here.
- *
- * @author Dane Low
- * @version (a version number or a date)
+ * @author Dane (Layout)
+ * @author Dane (Obstacle)
  */
+
 public class Kitchen3 extends SaviourLevel {
-    /**
-     * Constructor for objects of class Kitchen3.
-     */
+
     public Kitchen3() {
         super(90, 70, 825, 200, LevelType.KITCHEN);
         prepareWalls();
@@ -18,9 +13,6 @@ public class Kitchen3 extends SaviourLevel {
     }
 
     public void prepareWalls() {
-        //generates all the walls. 
-        //you could just place them and save the world.
-
         //Top Left Horizontal Wall
         for (int i = 1; i < 10; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
@@ -61,6 +53,8 @@ public class Kitchen3 extends SaviourLevel {
         for (int i = 5; i < 11; i++) {
             addObject(new Wall(), (getWidth() / 30) * 25 + halfWall, getPos(i));
         }
+        
+        //Add other walls
         addObject(new Wall(), 435, 195);
         addObject(new Wall(), 435, 255);
         addObject(new Wall(), 435, 465);
@@ -84,12 +78,15 @@ public class Kitchen3 extends SaviourLevel {
         addObstacle(new Arrow(), 405, 465, true, 270);
         addObstacle(new Arrow(), 345, 465, true, 270);
         addObstacle(new Arrow(), 375, 465, true, 90);
+        
         //Only two spikes on the level
         addObstacle(new Spikes(2), 475, 345, false, 180);
         addObstacle(new Spikes(2), 575, 425, false);
+        
         //Left side obstacles
         addObstacle(new Spear(), 35, 390, false);
         addObstacle(new Acid(), 120, 345, false);
+        
         //Right side Obstacles
         addObstacle(new Arrow(), 585, 165, true, 270);
         addObstacle(new Arrow(), 675, 165, true, 270);

@@ -1,19 +1,10 @@
-import greenfoot.*;
-
 /**
- * Write a description of class Dungeon2 here.
- * Layout of Dungeon 2
- *
- * @author Manasi Nagtode (layout)
- *         Obstacles of Dungeon 2
- * @author Poojitha Karumanchi (obstacles)
- * @version 1 Oct 21, 2014
+ * @author Manasi Nagtode (Layout)
+ * @author Poojitha Karumanchi (Obstacle)
  */
+
 public class Dungeon2 extends SaviourLevel {
 
-    /**
-     * Constructor for objects of class Dungeon2.
-     */
     public Dungeon2() {
         super(90, 70, 665, 200, LevelType.DUNGEON);
         prepare();
@@ -25,13 +16,6 @@ public class Dungeon2 extends SaviourLevel {
     }
 
     public void prepareWalls() {
-        //for (int i = 1; i < 15; i++) {
-        //    if (getPos(i) != 255) {
-        //        addObject(new Wall(), getWidth() / 2 + halfWall, getPos(i));  
-        //    }
-        //}
-        //third vert line
-
         // first vertical wall
         for (int i = 1; i < 8; i++) {
             addObject(new Wall(), getWidth() / 6 - halfWall, getPos(i));
@@ -77,13 +61,17 @@ public class Dungeon2 extends SaviourLevel {
     }
 
     public void prepareObstacles() {
+        //adds arrows
         addObstacle(new Arrow(), getWidth() / 6 - halfWall, getPos(15), true, 180);
         addObstacle(new Arrow(), getWidth() / 6 - halfWall, getPos(8), true, 180);
         addObstacle(new Arrow(), getWidth() / 4 + halfWall, getPos(5), true, -90);
+        addObstacle(new Arrow(), ((getWidth() / 3) + 40), getPos(4), true);
+        
+        //adds spikes
         addObstacle(new Spikes(2), 500, 300, false, 180);
         addObstacle(new Spikes(1), ((getWidth() / 3) + -0), 480, false);
-        addObstacle(new Arrow(), ((getWidth() / 3) + 40), getPos(4), true);
-        addObstacle(new Spear(), getPos(23), ((getHeight() / 5) * 4 - 30) + halfWall, false, 90);
 
+        //adds spear
+        addObstacle(new Spear(), getPos(23), ((getHeight() / 5) * 4 - 30) + halfWall, false, 90);
     }
 }
