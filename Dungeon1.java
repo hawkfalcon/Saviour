@@ -21,7 +21,7 @@ public class Dungeon1 extends SaviourLevel {
     }
 
     public void prepareWalls() {
-        
+
         //Middle Wall
         for (int i = 1; i < 15; i++) {
             if (getPos(i) != 255) {

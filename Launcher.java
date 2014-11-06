@@ -1,1 +1,2 @@
-public class Launcher extends Solid {}
+public class Launcher extends Solid {
+}
