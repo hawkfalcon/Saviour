@@ -9,7 +9,7 @@ public class Character extends Actor {
     public void act() {
         moveWithKeys();
         pickUpKey();
-        SaviourWorld.getInstance().powerUp();
+        checkHaungsMode();
     }
 
     //I hope this is self explanatory.
@@ -43,16 +43,23 @@ public class Character extends Actor {
     }
     
     //Picking up keys
-    public void pickUpKey()
-    {
+    public void pickUpKey() {
         Actor k = getOneIntersectingObject(Key1.class);
         Actor t = getOneIntersectingObject(Key2.class);
-        if ( k != null )
-        {
+        if (k != null) {
             getWorld().removeObject(k);
         }
-        if ( t != null ){
+        if (t != null){
             getWorld().removeObject(t);
+        }
+    }
+    
+    public void checkHaungsMode() {
+        if (Greenfoot.isKeyDown("h")){
+            SaviourWorld.getInstance().setHaungsMode(true);
+        }
+        if (Greenfoot.isKeyDown("y")) {
+            SaviourWorld.getInstance().setHaungsMode(false);
         }
     }
 }

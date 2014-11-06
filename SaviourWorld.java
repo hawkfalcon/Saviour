@@ -37,14 +37,8 @@ public class SaviourWorld {
         } 
     }
     
-    public void powerUp()
-    {
-        if (Greenfoot.isKeyDown("h")){
-            haungsmode = true;
-        }
-        if (Greenfoot.isKeyDown("y")) {
-            haungsmode = false;
-        }
+    public void setHaungsMode(boolean haungsmode) {
+        this.haungsmode = haungsmode;
     }
     
     public boolean haungsMode()
