@@ -18,16 +18,15 @@ public class Bedroom3 extends SaviourLevel
     {
         super(90, 70, 675, 200, LevelType.BEDROOM);
         prepare();
-        setWalls();
     }
-    
+
     public void prepare()
     {
-        setWalls();
+        prepareWalls();
         prepareObstacles();
     }
-    
-    public void setWalls()
+
+    public void prepareWalls()
     {
         //top horiz right wall
         for (int i = 1; i < 10; i++) {
@@ -46,7 +45,7 @@ public class Bedroom3 extends SaviourLevel
             addObject(new Wall(), getWidth() /2 + halfWall, getPos(i));
         }
         //bottom boriz wall
-         for (int i = 6; i < 25; i++) {
+        for (int i = 6; i < 25; i++) {
             addObject(new Wall(), getPos(i), getHeight() - 180 + halfWall);
         }
         //right vert wall
@@ -56,15 +55,13 @@ public class Bedroom3 extends SaviourLevel
         for (int i = 20; i < 25; i++) {
             addObject(new Wall(), getPos(i), getHeight() - 480 + halfWall);
         }
-         for (int i = 4; i < 11; i++) {
+        for (int i = 4; i < 11; i++) {
             addObject(new Wall(), getWidth() /3 * 2 + halfWall, getPos(i));
         }
     }
-    
-    public void prepareObstacles() {
-        
-        //Brick
 
+    public void prepareObstacles() {
+        //Brick
         addObstacle(new Brick(1), 300, 30, false,180);
         addObstacle(new Brick(1), 260, 460);
         addObstacle(new Brick(1), 370, 460);
@@ -76,53 +73,38 @@ public class Bedroom3 extends SaviourLevel
         addObstacle(new Brick(1), 260, 460);
         addObstacle(new Brick(1), 370, 460);
 
-
         //Spear
- 
-        
         
         //Acid
-
         addObstacle(new Acid(), 50, 170); 
 
+        addObstacle(new Acid(), 765, 142);
+        addObstacle(new Acid(), 765, 180);
+        addObstacle(new Acid(), 765, 220);
+        addObstacle(new Acid(), 850, 440);
+        addObstacle(new Acid(), 850, 410);
+        addObstacle(new Acid(), 850, 370);
+        addObstacle(new Acid(), 850, 340);
 
-      addObstacle(new Acid(), 765, 142);
-      addObstacle(new Acid(), 765, 180);
-      addObstacle(new Acid(), 765, 220);
-      addObstacle(new Acid(), 850, 440);
-      addObstacle(new Acid(), 850, 410);
-      addObstacle(new Acid(), 850, 370);
-      addObstacle(new Acid(), 850, 340);
-      
-        
 
         addObstacle(new Acid(), 50, 170); 
-
 
         //Arrows
-        addObstacle(new Arrow(), 45, 525, true, 0);
-        addObstacle(new Arrow(), 345, 135);
-        addObstacle(new Arrow(), 345, 320);
-        
+        addObstacle(new Arrow(), 45, 525, true);
+        addObstacle(new Arrow(), 345, 135,true);
+        addObstacle(new Arrow(), 345, 314, true);
+
         //Spikes
+        addObstacle(new Spikes(1),  200, 335, false, 180);
+        addObstacle(new Spikes(1),  270, 210, false, 0);
+        //addObstacle(new Spikes), 850,630);
 
-        addObstacle(new Spikes(1),  200, 320, false, 180);
-        addObstacle(new Spikes(1),  270, 220, false, 0);
-       //addObstacle(new Spikes), 850,630);
-        
+        addObstacle(new Spikes(2), 500, 300, false,180); 
+        addObstacle(new Spikes(2), 570, 150, false, 0);
 
-       addObstacle(new Spikes(2), 500, 300, false,180); 
-       addObstacle(new Spikes(2), 570, 150, false, 0);
-
-        addObstacle(new Spikes(1),  200, 320, false, 180);
-        addObstacle(new Spikes(1),  270, 220, false, 0);
-
-       //addObstacle(new Spikes), 850,630);
-        
-
-    
+        //addObstacle(new Spikes), 850,630);
 
     
     
-}
+    }
 }
