@@ -75,9 +75,9 @@ public class Bedroom1 extends SaviourLevel {
             //Arrows
             addObstacle(new Arrow(), getWidth() / 6 + halfWall, getPos(i), true, 180);
             addObstacle(new Arrow(), 3 * halfWall, getPos(17), true, 0);
-            addObstacle(new Arrow(), 765, 434,true);
-            addObstacle(new Arrow(), 465, 433, true, 270);
-            addObstacle(new Arrow(), 735, 132, true);
+            addObstacle(new Arrow(), 765, 435,true);
+            addObstacle(new Arrow(), 465, 435, true, 270);
+            addObstacle(new Arrow(), 735, 135, true);
 
             //Bricks
             addObstacle(new Brick(1), 510, 530);
