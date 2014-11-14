@@ -25,7 +25,7 @@ public class Obstacle extends Actor {
     //kill player if touched
     public void killer() {
         //check if Haungs Mode has been activated
-        if (SaviourWorld.getInstance().haungsMode()) {
+        if (!SaviourWorld.getInstance().haungsMode()) {
             //get character
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
