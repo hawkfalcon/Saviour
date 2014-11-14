@@ -1,5 +1,3 @@
-import greenfoot.*;
-
 /**
  * Write a description of class Bedroom3 here.
  *
@@ -52,14 +50,14 @@ public class Bedroom3 extends SaviourLevel {
         }
     }
 
-    public void prepareObstacles() {        
+    public void prepareObstacles() {
         //Brick
         addObstacle(new Brick(1), 300, 30, false, 180);
         addObstacle(new Brick(1), 260, 460);
         addObstacle(new Brick(1), 370, 460);
         addObstacle(new Brick(1), 460, 50, false, 90);
         addObstacle(new Brick(1), 740, 50, false, 90);
-        
+
         //Acid
         addObstacle(new Acid(), 50, 170);
         addObstacle(new Acid(), 765, 142);
@@ -69,16 +67,16 @@ public class Bedroom3 extends SaviourLevel {
         addObstacle(new Acid(), 850, 410);
         addObstacle(new Acid(), 850, 370);
         addObstacle(new Acid(), 850, 340);
-    
+
         //Arrows
         addObstacle(new Arrow(), 45, 525, true);
         addObstacle(new Arrow(), 345, 135, true);
-        addObstacle(new Arrow(), 345, 314, true);   
-        
+        addObstacle(new Arrow(), 345, 314, true);
+
         //Spikes
-        addObstacle(new Spikes(1),  200, 320, false, 180);
-        addObstacle(new Spikes(2), 500, 300, false,180); 
+        addObstacle(new Spikes(1), 200, 320, false, 180);
+        addObstacle(new Spikes(2), 500, 300, false, 180);
         addObstacle(new Spikes(2), 570, 150, false, 0);
-        addObstacle(new Spikes(1),  270, 220, false, 0);
+        addObstacle(new Spikes(1), 270, 220, false, 0);
     }
 }     

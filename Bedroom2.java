@@ -1,5 +1,3 @@
-import greenfoot.*;
-
 /**
  * Write a description of class Bedroom2 here.
  *

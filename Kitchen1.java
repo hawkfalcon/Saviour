@@ -17,7 +17,7 @@ public class Kitchen1 extends SaviourLevel {
     public void prepareWalls() {
         //Top Horizontal Wall
         for (int i = 1; i < 25; i++) {
-            addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
+            addObject(new Wall(), getPos(i), (getHeight() / 4) - halfWall);
         }
         //Bottom Left Vertical Wall
         for (int i = 10; i < 16; i++) {

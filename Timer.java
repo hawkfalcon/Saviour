@@ -4,8 +4,6 @@ import java.awt.*;
 
 public class Timer extends Actor {
     private GreenfootImage board;
-    private GreenfootImage timer;
-    private String label = "Time: ";
     private int bravo = 0;
     private int yungtimer = 0;
 
@@ -29,14 +27,14 @@ public class Timer extends Actor {
     }
 
     private void update() {
-        timer = new GreenfootImage(board);
-        timer.drawImage(new GreenfootImage(label + bravo, 18, Color.WHITE, new Color(0, 0, 0, 0)), 25, 5);
+        GreenfootImage timer = new GreenfootImage(board);
+        timer.drawImage(new GreenfootImage("Time: " + bravo, 18, Color.WHITE, new Color(0, 0, 0, 0)), 25, 5);
         this.setImage(timer);
     }
-    
-    private void gotTime(){
-        if (yungtimer == 46){
-            bravo ++;
+
+    private void gotTime() {
+        if (yungtimer == 46) {
+            bravo++;
             yungtimer = 0;
             update();
         }

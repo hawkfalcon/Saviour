@@ -2,9 +2,9 @@
  * @author Dane (Layout)
  * @author Leighton (Obstacle)
  */
-    
+
 public class Dungeon3 extends SaviourLevel {
-    
+
     public Dungeon3() {
         super(90, 70, 675, 200, LevelType.DUNGEON);
         prepare();
@@ -18,7 +18,7 @@ public class Dungeon3 extends SaviourLevel {
     public void prepareWalls() {
         //Top Left Wall Horizontal Wall
         for (int i = 1; i < 5; i++) {
-            addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
+            addObject(new Wall(), getPos(i), (getHeight() / 4) - halfWall);
         }
         //Bottom Left Horizontal Wall
         for (int i = 1; i < 5; i++) {
@@ -56,7 +56,7 @@ public class Dungeon3 extends SaviourLevel {
         for (int i = 19; i < 25; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 30) * 12 + halfWall);
         }
-       
+
         //Add walls
         addObject(new Wall(), 406, 572);
         addObject(new Wall(), 525, 480);

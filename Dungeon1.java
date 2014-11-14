@@ -51,10 +51,10 @@ public class Dungeon1 extends SaviourLevel {
         //adds arrows
         addObstacle(new Arrow(), 165, 465, true);
         addObstacle(new Arrow(), 465, 255, true, 180);
-        
+
         //adds spear
         addObstacle(new Spear(), 465, 465, true, 90);
-        
+
         //adds spikes
         addObstacle(new Spikes(2), 573, 300);
         addObstacle(new Spikes(1), 480, 240, false, 180);

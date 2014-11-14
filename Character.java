@@ -2,7 +2,8 @@ import greenfoot.*;
 
 /**
  * Your character. Basic ARROW KEY movement.
- * @Author Tristen
+ *
+ * @author Tristen
  */
 
 public class Character extends Actor {

@@ -1,1 +1,2 @@
-public class Key1 extends Key {}
+public class Key1 extends Key {
+}

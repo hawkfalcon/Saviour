@@ -15,7 +15,7 @@ public class Kitchen3 extends SaviourLevel {
     public void prepareWalls() {
         //Top Left Horizontal Wall
         for (int i = 1; i < 10; i++) {
-            addObject(new Wall(), getPos(i), (getHeight() / 4) * 1 - halfWall);
+            addObject(new Wall(), getPos(i), (getHeight() / 4) - halfWall);
         }
         //Top Right Horizontal Wall pt 1
         for (int i = 15; i < 19; i++) {
@@ -53,7 +53,7 @@ public class Kitchen3 extends SaviourLevel {
         for (int i = 5; i < 11; i++) {
             addObject(new Wall(), (getWidth() / 30) * 25 + halfWall, getPos(i));
         }
-        
+
         //Add other walls
         addObject(new Wall(), 435, 195);
         addObject(new Wall(), 435, 255);
@@ -78,15 +78,15 @@ public class Kitchen3 extends SaviourLevel {
         addObstacle(new Arrow(), 405, 465, true, 270);
         addObstacle(new Arrow(), 345, 465, true, 270);
         addObstacle(new Arrow(), 375, 465, true, 90);
-        
+
         //Only two spikes on the level
         addObstacle(new Spikes(2), 475, 345, false, 180);
         addObstacle(new Spikes(2), 575, 425, false);
-        
+
         //Left side obstacles
         addObstacle(new Spear(), 35, 390, false);
         addObstacle(new Acid(), 120, 345, false);
-        
+
         //Right side Obstacles
         addObstacle(new Arrow(), 585, 165, true, 270);
         addObstacle(new Arrow(), 675, 165, true, 270);
