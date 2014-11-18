@@ -28,11 +28,11 @@ public class Bedroom2 extends SaviourLevel {
             addObject(new Wall(), getPos(i), getHeight() - 480 + halfWall);
         }
         //right vert wall
-        for (int i = 4; i < 15; i++) {
+        for (int i = 4; i < 14; i++) {
             addObject(new Wall(), getWidth() - 180 + halfWall, getPos(i));
         }
         //Bottom horiz wall
-        for (int i = 5; i < 25; i++) {
+        for (int i = 5; i < 24; i++) {
             addObject(new Wall(), getPos(i), getHeight() - 180 + halfWall);
         }
         //left vert wall
@@ -84,6 +84,7 @@ public class Bedroom2 extends SaviourLevel {
         addObstacle(new Arrow(), 500, 555, true, -45);
         addObstacle(new Arrow(), 195, 405, true, -45);
         addObstacle(new Arrow(), 315, 225, true, 0);
+        addObstacle(new Arrow(), 735, 435, true, 45);
 
         //Spikes
         addObstacle(new Spikes(2), 50, 270, false, 180);
