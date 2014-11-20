@@ -21,6 +21,7 @@ public class Endpoint extends Actor {
             if (c != null) {
                 World world = getWorld();
                 world.removeObject(c);
+                GlobalTimer.getInstance().addTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
                 SaviourWorld sw = SaviourWorld.getInstance();
                 sw.levelup();
                 world.addObject(new Fade(new CutScene(sw.getLevel()), true), world.getWidth() / 2, world.getHeight() / 2);

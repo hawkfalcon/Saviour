@@ -7,7 +7,7 @@
 public class GlobalTimer  
 {
     private static GlobalTimer instance = null;
-    private int globaltime = 0;
+    private int globaltimer = 0;
     public static GlobalTimer getInstance() {
         if (instance == null) {
             instance = new GlobalTimer();
@@ -19,11 +19,11 @@ public class GlobalTimer
     }
     
     public int getTimer(){
-        return globaltime;
+        return globaltimer;
     }
     
     public void addTime(int globaltime){
-        this.globaltime += globaltime;
+        globaltimer += globaltime;
     }
     
 }
