@@ -39,4 +39,8 @@ public class Timer extends Actor {
             update();
         }
     }
+    
+    public int getTime(){
+        return bravo;
+    }
 }
