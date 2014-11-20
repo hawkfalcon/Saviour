@@ -13,6 +13,9 @@ public class SaviourWorld {
         }
         return instance;
     }
+    
+    private SaviourWorld() {
+    }
 
     int currentLevel = 1;
 
@@ -22,6 +25,10 @@ public class SaviourWorld {
 
     public void reset() {
         currentLevel = 1;
+    }
+    
+    public int getLevel() {
+        return currentLevel;
     }
 
     public World getNextLevel() {
