@@ -19,15 +19,19 @@ public class Character extends Actor {
     public void moveWithKeys() {
         if (Greenfoot.isKeyDown("left")) {
             setLocation(getX() - moveAmount, getY());
+            setImage("characterleftt.png");
         }
         if (Greenfoot.isKeyDown("right")) {
             setLocation(getX() + moveAmount, getY());
+            setImage("characterright.png");
         }
         if (Greenfoot.isKeyDown("up")) {
             setLocation(getX(), getY() - moveAmount);
+            //setImage("characterup.png");
         }
         if (Greenfoot.isKeyDown("down")) {
             setLocation(getX(), getY() + moveAmount);
+            //setImage("characterdown.png");
         }
 
     }
