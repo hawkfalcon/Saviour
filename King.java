@@ -45,7 +45,7 @@ public class King extends Actor {
             if (c != null) {
                 getWorld().removeObject(c);
                 SaviourWorld sw = SaviourWorld.getInstance();
-                getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+                getWorld().addObject(new Fade(sw.getNextLevel(false), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             }
         }
     }

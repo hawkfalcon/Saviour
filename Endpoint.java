@@ -24,7 +24,7 @@ public class Endpoint extends Actor {
                 GlobalTimer.getInstance().addTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
                 SaviourWorld sw = SaviourWorld.getInstance();
                 sw.levelup();
-                world.addObject(new Fade(new CutScene(sw.getLevel()), true), world.getWidth() / 2, world.getHeight() / 2);
+                world.addObject(new Fade(sw.getNextLevel(true), true), world.getWidth() / 2, world.getHeight() / 2);
             }
         }
     }

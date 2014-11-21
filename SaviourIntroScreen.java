@@ -15,7 +15,7 @@ public class SaviourIntroScreen extends World {
     public void act() {
         if (Greenfoot.mouseClicked(this)) {
             SaviourWorld sw = SaviourWorld.getInstance();
-            Greenfoot.setWorld(sw.getNextLevel());
+            Greenfoot.setWorld(sw.getNextLevel(true));
         }
     }
 }

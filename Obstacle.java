@@ -36,7 +36,7 @@ public class Obstacle extends Actor {
                 //get the world manager
                 SaviourWorld sw = SaviourWorld.getInstance();
                 //restart level
-                getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+                getWorld().addObject(new Fade(sw.getNextLevel(false), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             }
 
         }
