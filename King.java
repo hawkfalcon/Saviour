@@ -3,23 +3,24 @@ import greenfoot.*;
 /**
  * Write a description of class King here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * Dane(original)
+ * Leighton(expanded upon)
+ * 
  */
 public class King extends Actor {
-    public int timer = 0;
-
-    /**
-     * Act - do whatever the King wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public int timer = 0; 
+    
     public void act() {
         detect();
         charge();
         kill();
         move(1);
+        moveAround();
     }
 
+    /**
+     * Follows the character around the map
+     */
     public void detect() {
         if (getObjectsInRange(900, Character.class) != null) {
             for (Object o : getObjectsInRange(900, Character.class)) {
@@ -34,6 +35,7 @@ public class King extends Actor {
         if (timer >= 300) {
             move(3);
             if (timer == 325) {
+                throwKnife();
                 timer = 0;
             }
         }
@@ -59,5 +61,15 @@ public class King extends Actor {
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
             super.setLocation(oldX, oldY);
         }
+    }
+    
+    public void moveAround(){
+    
+    }
+    
+    private void throwKnife(){
+        //throws a knife in character's direction
+        Knife knife = new Knife();
+        getWorld().addObject(knife, getX(), getY());        
     }
 }
