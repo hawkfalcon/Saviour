@@ -4,18 +4,19 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GlobalTimer  
+public class GlobalStatistics  
 {
-    private static GlobalTimer instance = null;
+    private static GlobalStatistics instance = null;
     private int globaltimer = 0;
-    public static GlobalTimer getInstance() {
+    private int globalstars = 0;
+    public static GlobalStatistics getInstance() {
         if (instance == null) {
-            instance = new GlobalTimer();
+            instance = new GlobalStatistics();
         }
         return instance;
     }
     
-    private GlobalTimer() {
+    private GlobalStatistics() {
     }
     
     public int getTimer(){
@@ -24,6 +25,14 @@ public class GlobalTimer
     
     public void addTime(int globaltime){
         globaltimer += globaltime;
+    }
+    
+    public int getStars(){
+        return globalstars;
+    }
+    
+    public void addStars(int starcount){
+        globalstars += starcount;
     }
     
 }

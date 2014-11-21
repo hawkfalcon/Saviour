@@ -30,7 +30,8 @@ public class Obstacle extends Actor {
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
                 //add timer
-                GlobalTimer.getInstance().addTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
+                GlobalStatistics.getInstance().addTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
+                Stars.getInstance().snatchTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
                 //remove him
                 getWorld().removeObject(c);
                 //get the world manager
