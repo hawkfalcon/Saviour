@@ -6,7 +6,9 @@ import greenfoot.*;
  * Dane created obstacles + layout
  * Leighton edited layout + obstacles
  */
-public class Boss extends SaviourLevel {
+public class Boss extends SaviourLevel {       
+    public boolean dead = false;
+    
     /**
      * Constructor for objects of class Boss.
      */
@@ -14,17 +16,17 @@ public class Boss extends SaviourLevel {
         super(450, 450, 450, 100, LevelType.KITCHEN);
         prepare();
     }
-    
+
     public void act(){
         deadKing();
+        isKingDead();
     }
-    
+
     public void prepare() {
         Actor king = new King();
-        addObject(king, 450, 150);
+        addObject(king, 450, 220);
         prepareWalls();
         prepareObstacles();
-        spawnKeys();
     }
 
     public void prepareWalls() {
@@ -45,13 +47,13 @@ public class Boss extends SaviourLevel {
             addObject(new Wall(), getPos(i), (getHeight() / 3) - halfWall);
         }
         //Left Vertical Wall
-        for (int i = 7; i < 15; i++){
-            addObject(new Wall(), (getWidth()/30) * 5  + halfWall, getPos(i));
-        }
+        //for (int i = 8; i < 15; i++){
+        //    addObject(new Wall(), (getWidth()/30) * 5  + halfWall, getPos(i));
+        //}
         //Right Vertical Wall
-        for (int i = 7; i < 15; i++){
-            addObject(new Wall(), (getWidth()/15)* 12 + halfWall, getPos(i));
-        }
+        //for (int i = 8; i < 15; i++){
+        //    addObject(new Wall(), (getWidth()/15)* 12 + halfWall, getPos(i));
+        //}
     }
 
     public void prepareObstacles() {
@@ -64,16 +66,27 @@ public class Boss extends SaviourLevel {
         //adds arrows
         addObstacle(new Arrow(), 45, 465, true);
         addObstacle(new Arrow(), 855, 465, true, 180);
+        addObstacle(new Arrow(), 730, 225, true, 135);
+        addObstacle(new Arrow(), 170, 225, true, 45);
+        addObstacle(new Arrow(), 170, 370, true);
+        addObstacle(new Arrow(), 730, 370, true, 180);
     }
 
-    public void spawnKeys() {
-
+    public void deadKing(){
+        if (getObjects(King.class).isEmpty()){
+            dead = true;
+        }
     }
     
-    public void deadKing(){
-        //King dies and you get the key to save your lover
-        if (getObjects(King.class).size() == 0){
-            addObject(new Key1(), 450, 250);
+    public void isKingDead(){
+        if (dead == true){
+         //King dies and you get the key to save your lover
+         addObject(new Key1(), 562, 107);
+         dead = false;
         }
+    }
+    
+    public boolean checkKing(){
+        return dead;
     }
 }

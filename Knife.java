@@ -5,8 +5,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Knife extends Obstacle
 {
-       public void act() 
+    public void act() 
     {
+        fly();
         killer();
-    }    
+        die();
+    }
+
+    public void die()
+    {
+        //Knife dissapears if it hits a wall
+        if(!getIntersectingObjects(Wall.class).isEmpty()){
+            //Remove the knife
+            getWorld().removeObject(this);
+        }
+    }
 }

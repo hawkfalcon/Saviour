@@ -53,6 +53,17 @@ public class Obstacle extends Actor {
             super.setLocation(x, y);
         }
     }
+    
+    public void fly(){
+        //move
+        move(2);
+        if (getObjectsInRange(900, Character.class) != null) {
+            for (Object o : getObjectsInRange(900, Character.class)) {
+                Actor character = (Actor) o;
+                turnTowards(character.getX(), character.getY());
+            }
+        }
+    }
 
     //Slider info
     int incrementX = 0;

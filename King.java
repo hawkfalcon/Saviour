@@ -60,6 +60,7 @@ public class King extends Actor {
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
             super.setLocation(oldX, oldY);
+            turn(1);
         }
     }
     
@@ -67,7 +68,7 @@ public class King extends Actor {
     
     }
     
-    private void throwKnife(){
+    public void throwKnife(){
         //throws a knife in character's direction
         Knife knife = new Knife();
         getWorld().addObject(knife, getX(), getY());        
