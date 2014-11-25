@@ -9,10 +9,9 @@ public class CutScene extends World {
     
     //restart game on click
     public void act() {
-        if (Greenfoot.mouseClicked(this)) {
+        if (Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("space")) {
             SaviourWorld sw = SaviourWorld.getInstance();
             Greenfoot.setWorld(sw.getNextLevel(false));
         }
     }
-
 }
