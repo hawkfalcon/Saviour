@@ -6,20 +6,18 @@ import greenfoot.*;
  * Dane created obstacles + layout
  * Leighton edited layout + obstacles
  */
-public class Boss extends SaviourLevel {       
-    public boolean dead = false;
-    
+public class Boss extends SaviourLevel {
+    public boolean keysHere = false;
     /**
      * Constructor for objects of class Boss.
      */
     public Boss() {
-        super(450, 450, 450, 100, LevelType.KITCHEN);
+        super(450, 450, 362, 67, LevelType.KITCHEN);
         prepare();
     }
 
     public void act(){
-        deadKing();
-        isKingDead();
+        keyWhere();
     }
 
     public void prepare() {
@@ -72,21 +70,15 @@ public class Boss extends SaviourLevel {
         addObstacle(new Arrow(), 730, 370, true, 180);
     }
 
-    public void deadKing(){
-        if (getObjects(King.class).isEmpty()){
-            dead = true;
+    public void keyWhere(){
+        if(!getObjects(Key1.class).isEmpty()){
+            //if the key is here...
+            keysHere = true;
         }
     }
-    
-    public void isKingDead(){
-        if (dead == true){
-         //King dies and you get the key to save your lover
-         addObject(new Key1(), 562, 107);
-         dead = false;
-        }
-    }
-    
-    public boolean checkKing(){
-        return dead;
+
+    public boolean checkKey(){
+        //checks if the key is in the world
+        return keysHere;
     }
 }

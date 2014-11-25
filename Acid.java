@@ -14,6 +14,7 @@ public class Acid extends Obstacle {
         Actor g = getOneIntersectingObject(King.class);
         if (g != null){
             getWorld().removeObject(g);
+            getWorld().addObject(new Key1(), 562, 107);
         }
     }
-}
+    }
