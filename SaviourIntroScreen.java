@@ -9,19 +9,27 @@ public class SaviourIntroScreen extends World {
         // Create a new world with 900x600 cells with a cell size of 1x1 pixels.
         super(900, 600, 1);
         showText("Start Game", getWidth() - 230, getHeight()/4 - 50);
-        prepare();
+       prepare();
     }
 
     //restart game on click
     public void act() {
-        if (Greenfoot.mouseClicked(this)) {
+        
+        /*Actor character;
+        character = getOneIntersectingObject(Character.class);
+        if (character!= null) {
             SaviourWorld sw = SaviourWorld.getInstance();
             Greenfoot.setWorld(sw.getNextLevel(true));
         }
-        
+         * 
+         */
+     
     }
-    public void prepare(){
+     
+    public void prepare()
+    {
         addObject(new Character(), 150, 100);
         addObject(new Endpoint(), 570, 100);
     }
+    
 }
