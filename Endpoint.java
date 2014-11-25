@@ -19,10 +19,16 @@ public class Endpoint extends Actor {
         if (holdingkey) {
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
-                getWorld().removeObject(c);
+                World world = getWorld();
+                world.removeObject(c);
+                GlobalStatistics.getInstance().addTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
+                Stars.getInstance().snatchTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
                 SaviourWorld sw = SaviourWorld.getInstance();
                 sw.levelup();
-                getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+                world.addObject(new Fade(sw.getNextLevel(true), true), world.getWidth() / 2, world.getHeight() / 2);
+                GlobalStatistics.getInstance().addStars(Stars.getInstance().earnedStars());
+                System.out.println(Stars.getInstance().earnedStars());
+                Stars.getInstance().timerReset();
             }
         }
     }
