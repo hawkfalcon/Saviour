@@ -15,7 +15,7 @@ public class Knife extends Obstacle
     public void die()
     {
         //Knife dissapears if it hits a wall
-        if(!getIntersectingObjects(Wall.class).isEmpty()){
+        if(!getIntersectingObjects(Solid.class).isEmpty()){
             //Remove the knife
             getWorld().removeObject(this);
         }

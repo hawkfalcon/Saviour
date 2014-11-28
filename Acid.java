@@ -2,6 +2,7 @@ import greenfoot.*;
 
 /**
  * Acid
+ * kingKiller created by Leighton
  */
 public class Acid extends Obstacle {
     public void act() {
@@ -13,8 +14,11 @@ public class Acid extends Obstacle {
         //this kills the king
         Actor g = getOneIntersectingObject(King.class);
         if (g != null){
+            //remove king from the world
             getWorld().removeObject(g);
-            getWorld().addObject(new Key1(), 562, 107);
+            //change the location of the key hidden in wall
+            Actor key = (Actor) getWorld().getObjects(Key1.class).get(0);
+            key.setLocation(560,72);
         }
     }
     }

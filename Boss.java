@@ -6,8 +6,7 @@ import greenfoot.*;
  * Dane created obstacles + layout
  * Leighton edited layout + obstacles
  */
-public class Boss extends SaviourLevel {
-    public boolean keysHere = false;
+public class Boss extends SaviourLevel {    
     /**
      * Constructor for objects of class Boss.
      */
@@ -17,7 +16,6 @@ public class Boss extends SaviourLevel {
     }
 
     public void act(){
-        keyWhere();
     }
 
     public void prepare() {
@@ -44,14 +42,6 @@ public class Boss extends SaviourLevel {
         for (int i = 17; i < 20; i++) {
             addObject(new Wall(), getPos(i), (getHeight() / 3) - halfWall);
         }
-        //Left Vertical Wall
-        //for (int i = 8; i < 15; i++){
-        //    addObject(new Wall(), (getWidth()/30) * 5  + halfWall, getPos(i));
-        //}
-        //Right Vertical Wall
-        //for (int i = 8; i < 15; i++){
-        //    addObject(new Wall(), (getWidth()/15)* 12 + halfWall, getPos(i));
-        //}
     }
 
     public void prepareObstacles() {
@@ -68,17 +58,8 @@ public class Boss extends SaviourLevel {
         addObstacle(new Arrow(), 170, 225, true, 45);
         addObstacle(new Arrow(), 170, 370, true);
         addObstacle(new Arrow(), 730, 370, true, 180);
-    }
-
-    public void keyWhere(){
-        if(!getObjects(Key1.class).isEmpty()){
-            //if the key is here...
-            keysHere = true;
-        }
-    }
-
-    public boolean checkKey(){
-        //checks if the key is in the world
-        return keysHere;
-    }
+        
+        //add Key off screen
+        addObject(new Key1(), 888, 165);
+    }    
 }
