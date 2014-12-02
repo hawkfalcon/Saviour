@@ -4,7 +4,7 @@ import greenfoot.*;
  * Write a description of class King here.
  *
  * Dane(original)
- * Leighton(added knives)
+ * Leighton(expanded upon)
  * 
  */
 public class King extends Actor {
@@ -61,12 +61,8 @@ public class King extends Actor {
         int directionY = oldY > getY() ? 1 : -1;
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
-<<<<<<< HEAD
             super.setLocation(oldX + directionX, oldY + directionY);
             move(1);
-=======
-            super.setLocation(oldX, oldY);
->>>>>>> FETCH_HEAD
         }
     }
     
