@@ -45,7 +45,7 @@ public class SaviourLevel extends World {
         addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
 
-    enum LevelType {DUNGEON, KITCHEN, BEDROOM}
+    enum LevelType {DUNGEON, KITCHEN, BEDROOM, BOSS}
 
     /**
      * Constructor for objects of class SaviourLevelManager.
