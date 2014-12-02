@@ -19,13 +19,9 @@ public class Endpoint extends Actor {
         if (holdingkey) {
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
-<<<<<<< HEAD
                 SaviourLevel world = (SaviourLevel)getWorld();
                 world.removeObject(c);
                 world.getSound().stop();
-=======
-                World world = getWorld();
-                world.removeObject(c);
                 if (world.getObjects(Timer.class).size() == 0) {
                     SaviourWorld sw = SaviourWorld.getInstance();
                     Greenfoot.setWorld(sw.getNextLevel(true));
@@ -33,7 +29,6 @@ public class Endpoint extends Actor {
                 }
                 GlobalStatistics.getInstance().addTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
                 Stars.getInstance().snatchTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
->>>>>>> FETCH_HEAD
                 SaviourWorld sw = SaviourWorld.getInstance();
                 sw.levelup();
                 world.addObject(new Fade(sw.getNextLevel(true), true), world.getWidth() / 2, world.getHeight() / 2);
