@@ -4,7 +4,9 @@ import greenfoot.*;
  * Write a description of class King here.
  *
  * Dane(original)
- * Leighton(expanded upon)
+ * Leighton(expanded upon
+ * - added knife throwing
+ * - smoother movement when stuck on solids)
  * 
  */
 public class King extends Actor {
@@ -15,7 +17,6 @@ public class King extends Actor {
         charge();
         kill();
         move(1);
-        moveAround();
     }
 
     /**
@@ -34,7 +35,7 @@ public class King extends Actor {
         timer++;
         if (timer >= 300) {
             move(3);
-            if (timer == 325) {
+            if (timer == 350) {
                 throwKnife();
                 timer = 0;
             }
@@ -57,19 +58,13 @@ public class King extends Actor {
         int oldX = getX();
         int oldY = getY();
         super.setLocation(x, y);
+        int directionX = oldX > getX() ? 1 : -1;
+        int directionY = oldY > getY() ? 1 : -1;
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
-<<<<<<< HEAD
-            super.setLocation(oldX, oldY);
-=======
-            super.setLocation(oldX + directionX, oldY + directionY);
+           super.setLocation(oldX + directionX, oldY + directionY);
             move(1);
->>>>>>> 09e0af4e76a2de0b19e266a56c47c11912b8ac6f
         }
-    }
-    
-    public void moveAround(){
-    
     }
     
     public void throwKnife(){
