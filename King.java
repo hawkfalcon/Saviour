@@ -57,10 +57,12 @@ public class King extends Actor {
         int oldX = getX();
         int oldY = getY();
         super.setLocation(x, y);
+        int directionX = oldX > getX() ? 1 : -1;
+        int directionY = oldY > getY() ? 1 : -1;
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
-            super.setLocation(oldX, oldY);
-            turn(5);
+            super.setLocation(oldX + directionX, oldY + directionY);
+            move(1);
         }
     }
     
