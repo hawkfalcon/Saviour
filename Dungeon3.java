@@ -41,8 +41,8 @@ public class Dungeon3 extends SaviourLevel {
             addObject(new Wall(), (getWidth() / 15) * 12 + halfWall, getPos(i));
         }
         //Top Right Horizontal Wall
-        for (int i = 16; i < 24; i++) {
-            addObject(new Wall(), getPos(i), (getHeight() / 4) + halfWall);
+        for (int i = 15; i < 25; i++) {
+            addObject(new Wall(), getPos(i), (getHeight() / 4) - halfWall);
         }
         // Middle Vertical Wall
         for (int i = 5; i < 12; i++) {
@@ -66,19 +66,19 @@ public class Dungeon3 extends SaviourLevel {
     public void prepareObstacles() {
         //adds spikes
         addObstacle(new Spikes(1), 848, 450);
-        addObstacle(new Spikes(2), 758, 315, false, 180);
+        addObstacle(new Spikes(2), 758, 315, false, Direction.WEST);
         addObstacle(new Spikes(3), 843, 186);
 
         //adds arrows
         addObstacle(new Arrow(), 165, 465, true);
-        addObstacle(new Arrow(), 45, 525, true, 0);
-        addObstacle(new Arrow(), 165, 315, true, 180);
+        addObstacle(new Arrow(), 45, 525, true);
+        addObstacle(new Arrow(), 165, 315, true, Direction.WEST);
         addObstacle(new Arrow(), 165, 135, true);
 
         //adds spears
-
-        addObstacle(new Spear(), 315, 465, false, 90);
-        addObstacle(new Spear(), 465, 155, false, 270);
+        addObstacle(new Spear(), 315, 465, false, Direction.SOUTH);
+        addObstacle(new Spear(), 465, 150, false, Direction.NORTH);
+        addObstacle(new Spear(), 465, 0, false, Direction.SOUTH);
 
         //adds acid
         addObstacle(new Acid(), 420, 360);

@@ -42,10 +42,20 @@ public class SaviourLevel extends World {
         //make sure the black fade is in front
         setPaintOrder(Fade.class, Solid.class);
         //fade the world in
-        addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
+       // addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
 
-    enum LevelType {DUNGEON, KITCHEN, BEDROOM, BOSS}
+    public enum LevelType {DUNGEON, KITCHEN, BEDROOM, BOSS}
+    
+    public enum Direction {NORTH(270), EAST(0), SOUTH(90), WEST(180), SOUTHEAST(45), NORTHEAST(315), SOUTHWEST(135);
+       private int degrees;
+       Direction(int degrees) {
+        this.degrees = degrees;
+       }
+        public int getDegrees() { 
+            return degrees;
+        }
+    }
     
     GreenfootSound sound;
 
@@ -57,10 +67,7 @@ public class SaviourLevel extends World {
         setBackground(new GreenfootImage(/*"/backgrounds/" +*/ type.toString().toLowerCase() + ".jpg"));
         sound = new GreenfootSound(type.toString().toLowerCase() + ".mp3");
         sound.playLoop();
-        //if (type == LevelType.DUNGEON) {
         getBackground().setTransparency(200);
-        //}
-       
     }
 
     /**
@@ -125,9 +132,9 @@ public class SaviourLevel extends World {
     }
 
     //add an obstacle and a launcher at a rotation
-    public void addObstacle(Obstacle obstacle, int x, int y, boolean launcher, int rotation) {
+    public void addObstacle(Obstacle obstacle, int x, int y, boolean launcher, Direction direction) {
         if (launcher) addLauncher(x, y);
-        obstacle.setRotation(rotation);
+        obstacle.setRotation(direction.getDegrees());
         addObstacle(obstacle, x, y);
     }
     
@@ -138,5 +145,4 @@ public class SaviourLevel extends World {
     public void started() {
         sound.play();
     }
-
 }

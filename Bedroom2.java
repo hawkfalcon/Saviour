@@ -55,16 +55,16 @@ public class Bedroom2 extends SaviourLevel {
 
         //Brick
         addObstacle(new Brick(1), 165, 30);
-        addObstacle(new Brick(1), 345, 30, false, 180);
-        addObstacle(new Brick(1), 524, 30, false, 180);
-        addObstacle(new Brick(1), 615, 30, false, 180);
-        addObstacle(new Brick(1), 594, 300, false, 180);
+        addObstacle(new Brick(1), 345, 30, false, Direction.WEST);
+        addObstacle(new Brick(1), 524, 30, false, Direction.WEST);
+        addObstacle(new Brick(1), 615, 30, false, Direction.WEST);
+        addObstacle(new Brick(1), 594, 300, false, Direction.WEST);
 
         //Spear
-        addObstacle(new Spear(), 255, 15, false, 90);
-        addObstacle(new Spear(), 345, 15, false, 90);
-        addObstacle(new Spear(), 435, 15, false, 90);
-        addObstacle(new Spear(), 615, 15, false, 90);
+        addObstacle(new Spear(), 255, 15, false, Direction.SOUTH);
+        addObstacle(new Spear(), 345, 15, false, Direction.SOUTH);
+        addObstacle(new Spear(), 435, 15, false, Direction.SOUTH);
+        addObstacle(new Spear(), 615, 15, false, Direction.SOUTH);
 
         //Acid
         addObstacle(new Acid(), 775, 142);
@@ -78,15 +78,15 @@ public class Bedroom2 extends SaviourLevel {
         addObstacle(new Acid(), 500, 400);
 
         //Arrows
-        addObstacle(new Arrow(), 45, 400, true, 45);
-        addObstacle(new Arrow(), 500, 555, true, -45);
-        addObstacle(new Arrow(), 195, 405, true, -45);
-        addObstacle(new Arrow(), 315, 225, true, 0);
-        addObstacle(new Arrow(), 735, 435, true, 45);
+        addObstacle(new Arrow(), 45, 400, true, Direction.SOUTHEAST);
+        addObstacle(new Arrow(), 500, 555, true, Direction.NORTHEAST);
+        addObstacle(new Arrow(), 195, 405, true, Direction.NORTHEAST);
+        addObstacle(new Arrow(), 315, 225, true);
+        addObstacle(new Arrow(), 735, 435, true, Direction.SOUTHEAST);
 
         //Spikes
-        addObstacle(new Spikes(2), 50, 270, false, 180);
-        addObstacle(new Spikes(2), 50, 210, false, 180);
+        addObstacle(new Spikes(2), 50, 270, false, Direction.WEST);
+        addObstacle(new Spikes(2), 50, 210, false, Direction.WEST);
 
     }
 

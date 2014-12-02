@@ -11,7 +11,7 @@ public class Boss extends SaviourLevel {
      * Constructor for objects of class Boss.
      */
     public Boss() {
-        super(450, 450, 362, 67, LevelType.BOSS);
+        super(450, 450, 350, 80, LevelType.BOSS);
         prepare();
     }
 
@@ -28,19 +28,19 @@ public class Boss extends SaviourLevel {
     public void prepareWalls() {
         //Middle Left Vertical Wall
         for (int i = 1; i < 7; i++) {
-            addObject(new Wall(), getWidth() / 3 + halfWall, getPos(i));
+            addObject(new Wall(), getWidth() / 3 - halfWall, getPos(i));
         }
         //Middle Right Vertical Wall
         for (int i = 1; i < 7; i++) {
             addObject(new Wall(), (getWidth() / 3) * 2 + halfWall, getPos(i));
         }
         //Horizontal Top Wall Left
-        for (int i = 11; i < 14; i++) {
-            addObject(new Wall(), getPos(i), (getHeight() / 3) - halfWall);
+        for (int i = 10; i < 14; i++) {
+            addObject(new Wall(), getPos(i), (getHeight() / 4) - halfWall);
         }
         //Horizontal Top Wall Right
-        for (int i = 17; i < 20; i++) {
-            addObject(new Wall(), getPos(i), (getHeight() / 3) - halfWall);
+        for (int i = 16; i < 20; i++) {
+            addObject(new Wall(), getPos(i), (getHeight() / 4) - halfWall);
         }
     }
 
@@ -49,17 +49,17 @@ public class Boss extends SaviourLevel {
         addObstacle(new Acid(), 781, 130);
         addObstacle(new Acid(), 141, 130);
         //add spears
-        addObstacle(new Spear(), 315, 195, false, 90);
-        addObstacle(new Spear(), 615, 195, false, 90);
+        addObstacle(new Spear(), 285, 195, false, Direction.SOUTH);
+        addObstacle(new Spear(), 615, 195, false, Direction.SOUTH);
         //adds arrows
         addObstacle(new Arrow(), 45, 465, true);
-        addObstacle(new Arrow(), 855, 465, true, 180);
-        addObstacle(new Arrow(), 730, 225, true, 135);
-        addObstacle(new Arrow(), 170, 225, true, 45);
+        addObstacle(new Arrow(), 855, 465, true, Direction.WEST);
+        addObstacle(new Arrow(), 730, 225, true, Direction.SOUTHWEST);
+        addObstacle(new Arrow(), 170, 225, true, Direction.SOUTHEAST);
         addObstacle(new Arrow(), 170, 370, true);
-        addObstacle(new Arrow(), 730, 370, true, 180);
+        addObstacle(new Arrow(), 730, 370, true, Direction.WEST);
         
         //add Key off screen
         addObject(new Key1(), 888, 165);
-    }    
+    }
 }

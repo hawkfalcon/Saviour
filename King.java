@@ -63,7 +63,7 @@ public class King extends Actor {
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
            super.setLocation(oldX + directionX, oldY + directionY);
-            move(1);
+           move(1);
         }
     }
     

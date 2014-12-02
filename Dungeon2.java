@@ -6,7 +6,7 @@
 public class Dungeon2 extends SaviourLevel {
 
     public Dungeon2() {
-        super(90, 70, 665, 200, LevelType.DUNGEON);
+        super(90, 70, 660, 200, LevelType.DUNGEON);
         prepare();
     }
 
@@ -62,16 +62,16 @@ public class Dungeon2 extends SaviourLevel {
 
     public void prepareObstacles() {
         //adds arrows
-        addObstacle(new Arrow(), getWidth() / 6 - halfWall, getPos(15), true, 180);
-        addObstacle(new Arrow(), getWidth() / 6 - halfWall, getPos(8), true, 180);
-        addObstacle(new Arrow(), getWidth() / 4 + halfWall, getPos(5), true, -90);
+        addObstacle(new Arrow(), getWidth() / 6 - halfWall, getPos(15), true, Direction.WEST);
+        addObstacle(new Arrow(), getWidth() / 6 - halfWall, getPos(8), true, Direction.WEST);
+        addObstacle(new Arrow(), getWidth() / 4 + halfWall, getPos(5), true, Direction.NORTH);
         addObstacle(new Arrow(), ((getWidth() / 3) + 40), getPos(4), true);
 
         //adds spikes
-        addObstacle(new Spikes(2), 500, 300, false, 180);
+        addObstacle(new Spikes(2), 500, 300, false, Direction.WEST);
         addObstacle(new Spikes(1), (getWidth() / 3), 480, false);
 
         //adds spear
-        addObstacle(new Spear(), getPos(23), ((getHeight() / 5) * 4 - 30) + halfWall, false, 90);
+        addObstacle(new Spear(), getPos(23), ((getHeight() / 5) * 4 - 30) + halfWall, false, Direction.SOUTH);
     }
 }

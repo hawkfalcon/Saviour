@@ -6,7 +6,7 @@
 public class Kitchen3 extends SaviourLevel {
 
     public Kitchen3() {
-        super(90, 70, 825, 200, LevelType.KITCHEN);
+        super(90, 70, 825, 230, LevelType.KITCHEN);
         prepareWalls();
         prepareObstacles();
         addKeys();
@@ -72,15 +72,15 @@ public class Kitchen3 extends SaviourLevel {
 
     public void prepareObstacles() {
         //All the middle arrows
-        addObstacle(new Arrow(), 435, 165, true, 180);
-        addObstacle(new Arrow(), 435, 225, true, 180);
-        addObstacle(new Arrow(), 435, 285, true, 180);
-        addObstacle(new Arrow(), 405, 465, true, 270);
-        addObstacle(new Arrow(), 345, 465, true, 270);
-        addObstacle(new Arrow(), 375, 465, true, 90);
+        addObstacle(new Arrow(), 435, 165, true, Direction.WEST);
+        addObstacle(new Arrow(), 435, 225, true, Direction.WEST);
+        addObstacle(new Arrow(), 435, 285, true, Direction.WEST);
+        addObstacle(new Arrow(), 405, 465, true, Direction.NORTH);
+        addObstacle(new Arrow(), 345, 465, true, Direction.NORTH);
+        addObstacle(new Arrow(), 375, 465, true, Direction.SOUTH);
 
         //Only two spikes on the level
-        addObstacle(new Spikes(2), 475, 345, false, 180);
+        addObstacle(new Spikes(2), 475, 345, false, Direction.WEST);
         addObstacle(new Spikes(2), 575, 425, false);
 
         //Left side obstacles
@@ -88,9 +88,9 @@ public class Kitchen3 extends SaviourLevel {
         addObstacle(new Acid(), 120, 345, false);
 
         //Right side Obstacles
-        addObstacle(new Arrow(), 585, 165, true, 270);
-        addObstacle(new Arrow(), 675, 165, true, 270);
-        addObstacle(new Spear(), 850, 375, false, 180);
+        addObstacle(new Arrow(), 585, 165, true, Direction.NORTH);
+        addObstacle(new Arrow(), 675, 165, true, Direction.NORTH);
+        addObstacle(new Spear(), 850, 375, false, Direction.WEST);
         addObstacle(new Acid(), 725, 360, false);
     }
 
