@@ -45,7 +45,9 @@ public class SaviourLevel extends World {
         addObject(new Fade(null, false), getWidth() / 2, getHeight() / 2);
     }
 
-    enum LevelType {DUNGEON, KITCHEN, BEDROOM}
+    enum LevelType {DUNGEON, KITCHEN, BEDROOM, BOSS}
+    
+    GreenfootSound sound;
 
     /**
      * Constructor for objects of class SaviourLevelManager.
@@ -53,9 +55,12 @@ public class SaviourLevel extends World {
     public SaviourLevel(int xStart, int yStart, int xEnd, int yEnd, LevelType type) {
         this(xStart, yStart, xEnd, yEnd);
         setBackground(new GreenfootImage(/*"/backgrounds/" +*/ type.toString().toLowerCase() + ".jpg"));
+        sound = new GreenfootSound(type.toString().toLowerCase() + ".mp3");
+        sound.playLoop();
         //if (type == LevelType.DUNGEON) {
         getBackground().setTransparency(200);
         //}
+       
     }
 
     /**
@@ -98,6 +103,10 @@ public class SaviourLevel extends World {
     public int getPos(int i) {
         return wallSize * i + halfWall;
     }
+    
+    public GreenfootSound getSound() {
+        return sound;
+    }    
 
     //add a non-wall solid object
     public void addLauncher(int x, int y) {
@@ -121,4 +130,13 @@ public class SaviourLevel extends World {
         obstacle.setRotation(rotation);
         addObstacle(obstacle, x, y);
     }
+    
+    public void stopped() {
+        sound.pause();
+    }
+    
+    public void started() {
+        sound.play();
+}
+
 }
