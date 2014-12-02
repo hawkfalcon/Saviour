@@ -11,7 +11,7 @@ public class Boss extends SaviourLevel {
      * Constructor for objects of class Boss.
      */
     public Boss() {
-        super(450, 450, 362, 67, LevelType.KITCHEN);
+        super(450, 450, 362, 67, LevelType.BOSS);
         prepare();
     }
 
