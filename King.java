@@ -34,7 +34,7 @@ public class King extends Actor {
         timer++;
         if (timer >= 300) {
             move(3);
-            if (timer == 325) {
+            if (timer == 350) {
                 throwKnife();
                 timer = 0;
             }
@@ -57,9 +57,12 @@ public class King extends Actor {
         int oldX = getX();
         int oldY = getY();
         super.setLocation(x, y);
+        int directionX = oldX > getX() ? 1 : -1;
+        int directionY = oldY > getY() ? 1 : -1;
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
-            super.setLocation(oldX, oldY);
+            super.setLocation(oldX + directionX, oldY + directionY);
+            move(1);
         }
     }
     
