@@ -46,8 +46,11 @@ public class SaviourLevel extends World {
     }
 
     enum LevelType {DUNGEON, KITCHEN, BEDROOM, BOSS}
+<<<<<<< HEAD
     
     GreenfootSound sound;
+=======
+>>>>>>> FETCH_HEAD
 
     /**
      * Constructor for objects of class SaviourLevelManager.

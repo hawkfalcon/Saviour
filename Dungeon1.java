@@ -28,6 +28,9 @@ public class Dungeon1 extends SaviourLevel {
             addObject(new Wall(), (getWidth() / 6) * 5 - halfWall, getPos(i));
         }
         //Middle Right Wall
+        for ( int i = 21; i < 24; i++) {
+            addObject(new Wall(), getPos(i), getHeight()/4 + halfWall);
+        }
         for (int i = 5; i < 19; i++) {
             addObject(new Wall(), (getWidth() / 3) * 2 + halfWall, getPos(i));
         }
@@ -40,9 +43,7 @@ public class Dungeon1 extends SaviourLevel {
             addObject(new Wall(), getWidth() / 6 + halfWall, getPos(i));
         }
         // Little Wall Above End Point
-        for (int i = 21; i < 24; i++) {
-            addObject(new Wall(), getPos(i), getHeight() / 4 + halfWall);
-        }
+        
     }
 
     //add the obstacles
@@ -54,6 +55,8 @@ public class Dungeon1 extends SaviourLevel {
 
         //adds spear
         addObstacle(new Spear(), 465, 465, true, 90);
+        
+        
 
         //adds spikes
         addObstacle(new Spikes(2), 573, 300);

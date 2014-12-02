@@ -29,12 +29,15 @@ public class Obstacle extends Actor {
             //get character
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
+                //add timer
+                GlobalStatistics.getInstance().addTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
+                Stars.getInstance().snatchTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
                 //remove him
                 getWorld().removeObject(c);
                 //get the world manager
                 SaviourWorld sw = SaviourWorld.getInstance();
                 //restart level
-                getWorld().addObject(new Fade(sw.getNextLevel(), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+                getWorld().addObject(new Fade(sw.getNextLevel(false), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             }
 
         }
@@ -48,6 +51,17 @@ public class Obstacle extends Actor {
         if (!getIntersectingObjects(Wall.class).isEmpty()) {
             //set back to original location
             super.setLocation(x, y);
+        }
+    }
+    
+    public void fly(){
+        //move
+        move(2);
+        if (getObjectsInRange(900, Character.class) != null) {
+            for (Object o : getObjectsInRange(900, Character.class)) {
+                Actor character = (Actor) o;
+                turnTowards(character.getX(), character.getY());
+            }
         }
     }
 
