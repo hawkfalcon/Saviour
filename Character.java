@@ -47,6 +47,11 @@ public class Character extends Actor {
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
             super.setLocation(oldX, oldY);
         }
+        if (!getIntersectingObjects(Endpoint.class).isEmpty()) {
+            if (!((Endpoint)(getIntersectingObjects(Endpoint.class).get(0))).hasKey()) {
+               super.setLocation(oldX, oldY);
+            }
+        }
     }
 
     //Picking up keys

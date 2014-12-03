@@ -21,7 +21,7 @@ public class SaviourIntroScreen extends World {
     }
      
     public void prepare() {
-        addObject(new Character(), 150, 100);
+        addObject(new Character(), 250, 120);
         addObject(new Endpoint(), 570, 100);
     }
     

@@ -40,9 +40,9 @@ public class Fade extends Actor {
             //called on world creation
         } else {
             //its fading out, if its not clear yet
-            if (transparency > 1) {
+            if (transparency > 3) {
                 //fade out
-                transparency -= 2;
+                transparency -= 5;
             } else {
                 //remove the object
                 getWorld().removeObject(this);

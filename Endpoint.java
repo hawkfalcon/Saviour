@@ -16,9 +16,10 @@ public class Endpoint extends Actor {
     }
 
     public void characterHitsEndpoint() {
-        if (holdingkey) {
+        if (hasKey()) {
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
+                animate(c);
                 World world = getWorld();
                 world.removeObject(c);
                 if (world.getObjects(Timer.class).size() == 0) {
@@ -46,7 +47,20 @@ public class Endpoint extends Actor {
         }
     }
 
-    public boolean haveKey() {
+    public boolean hasKey() {
         return holdingkey;
+    }
+    
+    public void animate(Actor c) {
+        getWorld().setPaintOrder(Character.class, Endpoint.class);
+                 for (int i = 1; i < 6; i++) {
+                    setImage("Door" + i + ".png");
+                    Greenfoot.delay(3);
+                 }
+                 for (int i = 1; i < 40; i++) {
+                    c.setLocation(c.getX() + (getX() - c.getX())/10, c.getY() + (getY() - c.getY())/10);
+                    Greenfoot.delay(1);
+                 }
+                //Greenfoot.delay(2);
     }
 }
