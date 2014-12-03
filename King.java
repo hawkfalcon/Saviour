@@ -9,13 +9,13 @@ import greenfoot.*;
  * - smoother movement when stuck on solids)
  * 
  */
-public class King extends Actor {
+public class King extends Obstacle {
     public int timer = 0; 
     
     public void act() {
         detect();
         charge();
-        kill();
+        killer();
         move(1);
     }
 
@@ -38,17 +38,6 @@ public class King extends Actor {
             if (timer == 350) {
                 throwKnife();
                 timer = 0;
-            }
-        }
-    }
-
-    public void kill() {
-        if (!SaviourWorld.getInstance().haungsMode()) {
-            Actor c = getOneIntersectingObject(Character.class);
-            if (c != null) {
-                getWorld().removeObject(c);
-                SaviourWorld sw = SaviourWorld.getInstance();
-                getWorld().addObject(new Fade(sw.getNextLevel(false), true), getWorld().getWidth() / 2, getWorld().getHeight() / 2);
             }
         }
     }
