@@ -35,7 +35,7 @@ public class Obstacle extends Actor {
                 for (int i = 0; i < 10; i++) {
                    c.turn(9);
                 }
-                getWorld().addObject(new Blood(), getX(), getY());
+                getWorld().addObject(new Blood(), c.getX(), c.getY());
                 Greenfoot.delay(4);
                 //remove him
                 getWorld().removeObject(c);
