@@ -2,16 +2,15 @@ import greenfoot.*;
 
 /**
  * Write a description of class King here.
- *
+ * <p/>
  * Dane(original)
  * Leighton(expanded upon
  * - added knife throwing
  * - smoother movement when stuck on solids)
- * 
  */
 public class King extends Obstacle {
-    public int timer = 0; 
-    
+    public int timer = 0;
+
     public void act() {
         detect();
         charge();
@@ -51,14 +50,14 @@ public class King extends Obstacle {
         int directionY = oldY > getY() ? 1 : -1;
         //don't actually move if there is a solid object blocking us.
         if (!getIntersectingObjects(Solid.class).isEmpty()) {
-           super.setLocation(oldX + directionX, oldY + directionY);
-           move(1);
+            super.setLocation(oldX + directionX, oldY + directionY);
+            move(1);
         }
     }
-    
-    public void throwKnife(){
+
+    public void throwKnife() {
         //throws a knife in character's direction
         Knife knife = new Knife();
-        getWorld().addObject(knife, getX(), getY());        
+        getWorld().addObject(knife, getX(), getY());
     }
 }

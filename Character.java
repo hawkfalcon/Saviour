@@ -48,8 +48,8 @@ public class Character extends Actor {
             super.setLocation(oldX, oldY);
         }
         if (!getIntersectingObjects(Endpoint.class).isEmpty()) {
-            if (!((Endpoint)(getIntersectingObjects(Endpoint.class).get(0))).hasKey()) {
-               super.setLocation(oldX, oldY);
+            if (!((Endpoint) (getIntersectingObjects(Endpoint.class).get(0))).hasKey()) {
+                super.setLocation(oldX, oldY);
             }
         }
     }

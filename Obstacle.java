@@ -30,10 +30,10 @@ public class Obstacle extends Actor {
             Actor c = getOneIntersectingObject(Character.class);
             if (c != null) {
                 //add timer
-                GlobalStatistics.getInstance().addTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
-                Stars.getInstance().snatchTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
+                GlobalStatistics.getInstance().addTime(((Timer) getWorld().getObjects(Timer.class).get(0)).getTime());
+                Stars.getInstance().snatchTime(((Timer) getWorld().getObjects(Timer.class).get(0)).getTime());
                 for (int i = 0; i < 10; i++) {
-                   c.turn(9);
+                    c.turn(9);
                 }
                 getWorld().addObject(new Blood(), c.getX(), c.getY());
                 Greenfoot.delay(4);
@@ -58,11 +58,11 @@ public class Obstacle extends Actor {
             super.setLocation(x, y);
             GreenfootSound arrow = new GreenfootSound("arrow.mp3");
             arrow.setVolume(100);
-            arrow.play();  
+            arrow.play();
         }
     }
-    
-    public void fly(){
+
+    public void fly() {
         //move
         move(2);
         if (getObjectsInRange(900, Character.class) != null) {

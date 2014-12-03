@@ -27,12 +27,12 @@ public class Endpoint extends Actor {
                     Greenfoot.setWorld(sw.getNextLevel(true));
                     return;
                 }
-                SaviourLevel sl = (SaviourLevel)world;
+                SaviourLevel sl = (SaviourLevel) world;
                 if (sl.getSound() != null) {
-                   sl.getSound().stop();
+                    sl.getSound().stop();
                 }
-                GlobalStatistics.getInstance().addTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
-                Stars.getInstance().snatchTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
+                GlobalStatistics.getInstance().addTime(((Timer) world.getObjects(Timer.class).get(0)).getTime());
+                Stars.getInstance().snatchTime(((Timer) world.getObjects(Timer.class).get(0)).getTime());
                 SaviourWorld sw = SaviourWorld.getInstance();
                 sw.levelup();
                 world.addObject(new Fade(sw.getNextLevel(true), true), world.getWidth() / 2, world.getHeight() / 2);
@@ -52,17 +52,17 @@ public class Endpoint extends Actor {
     public boolean hasKey() {
         return holdingkey;
     }
-    
+
     public void animate(Actor c) {
         getWorld().setPaintOrder(Character.class, Endpoint.class);
-                 for (int i = 1; i < 6; i++) {
-                    setImage("Door" + i + ".png");
-                    Greenfoot.delay(3);
-                 }
-                 for (int i = 1; i < 40; i++) {
-                    c.setLocation(c.getX() + (getX() - c.getX())/10, c.getY() + (getY() - c.getY())/10);
-                    Greenfoot.delay(1);
-                 }
-                //Greenfoot.delay(2);
+        for (int i = 1; i < 6; i++) {
+            setImage("Door" + i + ".png");
+            Greenfoot.delay(3);
+        }
+        for (int i = 1; i < 40; i++) {
+            c.setLocation(c.getX() + (getX() - c.getX()) / 10, c.getY() + (getY() - c.getY()) / 10);
+            Greenfoot.delay(1);
+        }
+        //Greenfoot.delay(2);
     }
 }

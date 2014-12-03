@@ -46,17 +46,20 @@ public class SaviourLevel extends World {
     }
 
     public enum LevelType {DUNGEON, KITCHEN, BEDROOM, BOSS}
-    
-    public enum Direction {NORTH(270), EAST(0), SOUTH(90), WEST(180), SOUTHEAST(45), NORTHEAST(315), SOUTHWEST(135);
-       private int degrees;
-       Direction(int degrees) {
-        this.degrees = degrees;
-       }
-        public int getDegrees() { 
+
+    public enum Direction {
+        NORTH(270), EAST(0), SOUTH(90), WEST(180), SOUTHEAST(45), NORTHEAST(315), SOUTHWEST(135);
+        private int degrees;
+
+        Direction(int degrees) {
+            this.degrees = degrees;
+        }
+
+        public int getDegrees() {
             return degrees;
         }
     }
-    
+
     GreenfootSound sound;
 
     /**
@@ -111,10 +114,10 @@ public class SaviourLevel extends World {
     public int getPos(int i) {
         return wallSize * i + halfWall;
     }
-    
+
     public GreenfootSound getSound() {
         return sound;
-    }    
+    }
 
     //add a non-wall solid object
     public void addLauncher(int x, int y) {
@@ -138,16 +141,16 @@ public class SaviourLevel extends World {
         obstacle.setRotation(direction.getDegrees());
         addObstacle(obstacle, x, y);
     }
-    
+
     public void stopped() {
-       if (sound != null) {
-          sound.pause();
-       }
+        if (sound != null) {
+            sound.pause();
+        }
     }
-    
+
     public void started() {
         if (sound != null) {
-           sound.play();
-        } 
+            sound.play();
+        }
     }
 }

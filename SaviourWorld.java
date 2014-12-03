@@ -13,7 +13,7 @@ public class SaviourWorld {
         }
         return instance;
     }
-    
+
     private SaviourWorld() {
     }
 
@@ -26,7 +26,7 @@ public class SaviourWorld {
     public void reset() {
         currentLevel = 1;
     }
-    
+
     public int getLevel() {
         return currentLevel;
     }
@@ -35,9 +35,9 @@ public class SaviourWorld {
         switch (currentLevel) {
             case 1:
                 if (fromComplete) {
-                   return new CutScene("afterintro");
+                    return new CutScene("afterintro");
                 } else {
-                   return new Dungeon1();
+                    return new Dungeon1();
                 }
             case 2:
                 return new Dungeon2();
@@ -45,9 +45,9 @@ public class SaviourWorld {
                 return new Dungeon3();
             case 4:
                 if (fromComplete) {
-                   return new CutScene("afterdungeons");
+                    return new CutScene("afterdungeons");
                 } else {
-                   return new Kitchen1();
+                    return new Kitchen1();
                 }
             case 5:
                 return new Kitchen2();
@@ -55,7 +55,7 @@ public class SaviourWorld {
                 return new Kitchen3();
             case 7:
                 if (fromComplete) {
-                   return new CutScene("afterkitchens");
+                    return new CutScene("afterkitchens");
                 } else {
                     return new Bedroom1();
                 }
@@ -65,13 +65,13 @@ public class SaviourWorld {
                 return new Bedroom3();
             case 10:
                 if (fromComplete) {
-                   return new CutScene("afterbedrooms");
+                    return new CutScene("afterbedrooms");
                 } else {
                     return new Boss();
                 }
             case 11:
                 if (fromComplete) {
-                   return new CutScene("afterboss");
+                    return new CutScene("afterboss");
                 } else {
                     return new SaviourWinScreen();
                 }

@@ -69,35 +69,35 @@ public class Bedroom1 extends SaviourLevel {
 
     public void prepareObstacles() {
         for (int i = 5; i < 15; i += 3) {
-           addObstacle(new Arrow(), getWidth() / 6 + halfWall, getPos(i), true, Direction.WEST);
+            addObstacle(new Arrow(), getWidth() / 6 + halfWall, getPos(i), true, Direction.WEST);
         }
-            //Arrows
-            addObstacle(new Arrow(), 45, 525, true);
-            addObstacle(new Arrow(), 765, 435, true);
-            addObstacle(new Arrow(), 465, 435, true, Direction.NORTH);
-            addObstacle(new Arrow(), 735, 135, true);
-            addObstacle(new Arrow(), 365, 195, true);
+        //Arrows
+        addObstacle(new Arrow(), 45, 525, true);
+        addObstacle(new Arrow(), 765, 435, true);
+        addObstacle(new Arrow(), 465, 435, true, Direction.NORTH);
+        addObstacle(new Arrow(), 735, 135, true);
+        addObstacle(new Arrow(), 365, 195, true);
 
-            //Bricks
-            addObstacle(new Brick(1), 510, 530);
-            addObstacle(new Brick(1), 165, 455);
-            addObstacle(new Brick(1), 735, 455);
-            addObstacle(new Brick(1), 860, 150);
+        //Bricks
+        addObstacle(new Brick(1), 510, 530);
+        addObstacle(new Brick(1), 165, 455);
+        addObstacle(new Brick(1), 735, 455);
+        addObstacle(new Brick(1), 860, 150);
 
-            //Spikes
-            addObstacle(new Spikes(2), 500, 365);
-            addObstacle(new Spikes(1), 400, 295, false, Direction.WEST);
+        //Spikes
+        addObstacle(new Spikes(2), 500, 365);
+        addObstacle(new Spikes(1), 400, 295, false, Direction.WEST);
 
-            //Acid
-            addObstacle(new Acid(), 200, 170);
-            addObstacle(new Acid(), 240, 170);
-            addObstacle(new Acid(), 280, 170);
-            addObstacle(new Acid(), 330, 285);
-            addObstacle(new Acid(), 290, 285);
-            addObstacle(new Acid(), 250, 285);
-            addObstacle(new Acid(), 200, 400);
-            addObstacle(new Acid(), 240, 400);
-            addObstacle(new Acid(), 280, 400);
+        //Acid
+        addObstacle(new Acid(), 200, 170);
+        addObstacle(new Acid(), 240, 170);
+        addObstacle(new Acid(), 280, 170);
+        addObstacle(new Acid(), 330, 285);
+        addObstacle(new Acid(), 290, 285);
+        addObstacle(new Acid(), 250, 285);
+        addObstacle(new Acid(), 200, 400);
+        addObstacle(new Acid(), 240, 400);
+        addObstacle(new Acid(), 280, 400);
     }
 
     public void addKeys() {

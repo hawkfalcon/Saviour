@@ -6,7 +6,7 @@ import greenfoot.*;
  * Dane created obstacles + layout
  * Leighton edited layout + obstacles
  */
-public class Boss extends SaviourLevel {    
+public class Boss extends SaviourLevel {
     /**
      * Constructor for objects of class Boss.
      */
@@ -15,7 +15,7 @@ public class Boss extends SaviourLevel {
         prepare();
     }
 
-    public void act(){
+    public void act() {
     }
 
     public void prepare() {
@@ -58,7 +58,7 @@ public class Boss extends SaviourLevel {
         addObstacle(new Arrow(), 170, 225, true, Direction.SOUTHEAST);
         addObstacle(new Arrow(), 170, 370, true);
         addObstacle(new Arrow(), 730, 370, true, Direction.WEST);
-        
+
         //add Key off screen
         addObject(new Key(), 888, 165);
     }
