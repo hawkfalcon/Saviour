@@ -10,7 +10,7 @@ public class Bedroom1 extends SaviourLevel {
      * Constructor for objects of class Bedroom1.
      */
     public Bedroom1() {
-        super(90, 70, 425, 80, LevelType.BEDROOM);
+        super(100, 90, 425, 80, LevelType.BEDROOM);
         prepare();
     }
 
@@ -96,6 +96,8 @@ public class Bedroom1 extends SaviourLevel {
             addObstacle(new Acid(), 290, 285);
             addObstacle(new Acid(), 250, 285);
             addObstacle(new Acid(), 200, 400);
+            addObstacle(new Acid(), 240, 400);
+            addObstacle(new Acid(), 280, 400);
     }
 
     public void addKeys() {

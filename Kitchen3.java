@@ -6,7 +6,7 @@
 public class Kitchen3 extends SaviourLevel {
 
     public Kitchen3() {
-        super(90, 70, 825, 230, LevelType.KITCHEN);
+        super(75, 75, 825, 230, LevelType.KITCHEN);
         prepareWalls();
         prepareObstacles();
         addKeys();

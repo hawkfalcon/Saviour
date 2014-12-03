@@ -5,7 +5,7 @@
 public class Kitchen1 extends SaviourLevel {
 
     public Kitchen1() {
-        super(90, 70, 675, 200, LevelType.KITCHEN);
+        super(70, 75, 675, 200, LevelType.KITCHEN);
         prepare();
     }
 

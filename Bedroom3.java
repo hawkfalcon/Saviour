@@ -13,7 +13,7 @@ public class Bedroom3 extends SaviourLevel {
      * Constructor for objects of class Bedroom3.
      */
     public Bedroom3() {
-        super(90, 70, 810, 530, LevelType.BEDROOM);
+        super(75, 75, 810, 530, LevelType.BEDROOM);
         prepare();
     }
 
