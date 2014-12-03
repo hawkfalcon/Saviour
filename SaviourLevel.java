@@ -66,6 +66,7 @@ public class SaviourLevel extends World {
         this(xStart, yStart, xEnd, yEnd);
         setBackground(new GreenfootImage(/*"/backgrounds/" +*/ type.toString().toLowerCase() + ".jpg"));
         sound = new GreenfootSound(type.toString().toLowerCase() + ".mp3");
+        sound.setVolume(40);
         sound.playLoop();
         getBackground().setTransparency(200);
     }

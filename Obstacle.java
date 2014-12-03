@@ -51,6 +51,10 @@ public class Obstacle extends Actor {
         if (!getIntersectingObjects(Wall.class).isEmpty()) {
             //set back to original location
             super.setLocation(x, y);
+            GreenfootSound arrow = new GreenfootSound("arrow.mp3");
+            arrow.setVolume(100);
+            arrow.play();  
+            System.out.println("__");
         }
     }
     
