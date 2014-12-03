@@ -4,12 +4,9 @@ import greenfoot.*;
  * The goal to get to at the end of the level
  */
 public class Endpoint extends Actor {
+
     public boolean holdingkey = false;
 
-    /**
-     * Act - do whatever the Endpoint wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() {
         characterHitsEndpoint();
         carryKey();
@@ -63,6 +60,5 @@ public class Endpoint extends Actor {
             c.setLocation(c.getX() + (getX() - c.getX()) / 10, c.getY() + (getY() - c.getY()) / 10);
             Greenfoot.delay(1);
         }
-        //Greenfoot.delay(2);
     }
 }

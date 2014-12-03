@@ -1,2 +1,1 @@
-public class Wall extends Solid {
-}
+public class Wall extends Solid {}

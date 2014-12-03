@@ -1,14 +1,13 @@
 import greenfoot.*;
 
 /**
- * Write a description of class King here.
- * <p/>
  * Dane(original)
  * Leighton(expanded upon
  * - added knife throwing
  * - smoother movement when stuck on solids)
  */
 public class King extends Obstacle {
+
     public int timer = 0;
 
     public void act() {

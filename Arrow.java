@@ -7,5 +7,4 @@ public class Arrow extends Obstacle {
         respawner();
         killer();
     }
-
 }

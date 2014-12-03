@@ -2,6 +2,7 @@
  * Brick
  */
 public class Brick extends Obstacle {
+
     //@author Leighton
     //Takes a speed int (new Brick(2);)
     public Brick(int speed) {

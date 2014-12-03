@@ -5,6 +5,7 @@ import greenfoot.*;
  * kingKiller created by Leighton
  */
 public class Acid extends Obstacle {
+
     public void act() {
         killer();
         kingKiller();

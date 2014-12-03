@@ -3,6 +3,7 @@ import greenfoot.*;
 import java.awt.*;
 
 public class Timer extends Actor {
+
     private GreenfootImage board;
     private int bravo = 0;
     private int yungtimer = 0;
@@ -43,6 +44,4 @@ public class Timer extends Actor {
     public int getTime() {
         return bravo;
     }
-
-
 }

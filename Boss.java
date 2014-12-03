@@ -1,21 +1,17 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Boss here.
- * <p/>
  * Dane created obstacles + layout
  * Leighton edited layout + obstacles
  */
 public class Boss extends SaviourLevel {
+
     /**
      * Constructor for objects of class Boss.
      */
     public Boss() {
         super(450, 450, 350, 80, LevelType.BOSS);
         prepare();
-    }
-
-    public void act() {
     }
 
     public void prepare() {

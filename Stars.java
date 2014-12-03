@@ -1,4 +1,5 @@
 public class Stars {
+
     private static Stars instance = null;
     private int totalleveltime = 0;
 

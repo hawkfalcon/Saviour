@@ -1,10 +1,5 @@
-/**
- * Write a description of class GlobalTimer here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class GlobalStatistics {
+
     private static GlobalStatistics instance = null;
     private int globaltimer = 0;
     private int globalstars = 0;

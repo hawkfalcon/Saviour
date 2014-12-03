@@ -6,6 +6,7 @@ import greenfoot.*;
  * @author Tristen
  */
 public class Fade extends Actor {
+
     boolean fadeIn = true;
     int transparency = 0;
     World nWorld;
