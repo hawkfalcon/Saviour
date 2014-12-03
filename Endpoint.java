@@ -28,7 +28,9 @@ public class Endpoint extends Actor {
                     return;
                 }
                 SaviourLevel sl = (SaviourLevel)world;
-                sl.getSound().stop();
+                if (sl.getSound() != null) {
+                   sl.getSound().stop();
+                }
                 GlobalStatistics.getInstance().addTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
                 Stars.getInstance().snatchTime(((Timer)world.getObjects(Timer.class).get(0)).getTime());
                 SaviourWorld sw = SaviourWorld.getInstance();

@@ -139,10 +139,14 @@ public class SaviourLevel extends World {
     }
     
     public void stopped() {
-        sound.pause();
+       if (sound != null) {
+          sound.pause();
+       }
     }
     
     public void started() {
-        sound.play();
+        if (sound != null) {
+           sound.play();
+        } 
     }
 }
