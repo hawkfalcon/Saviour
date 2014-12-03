@@ -56,13 +56,9 @@ public class Character extends Actor {
 
     //Picking up keys
     public void pickUpKey() {
-        Actor k = getOneIntersectingObject(Key1.class);
-        Actor t = getOneIntersectingObject(Key2.class);
-        if (k != null) {
-            getWorld().removeObject(k);
-        }
-        if (t != null) {
-            getWorld().removeObject(t);
+        Actor key = getOneIntersectingObject(Key.class);
+        if (key != null) {
+            getWorld().removeObject(key);
         }
     }
 

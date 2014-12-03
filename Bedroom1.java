@@ -101,6 +101,6 @@ public class Bedroom1 extends SaviourLevel {
     }
 
     public void addKeys() {
-        addObject(new Key1(), 600, 360);
+        addObject(new Key(), 600, 360);
     }
 }

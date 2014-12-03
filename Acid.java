@@ -17,7 +17,7 @@ public class Acid extends Obstacle {
             //remove king from the world
             getWorld().removeObject(g);
             //change the location of the key hidden in wall
-            Actor key = (Actor) getWorld().getObjects(Key1.class).get(0);
+            Actor key = (Actor) getWorld().getObjects(Key.class).get(0);
             key.setLocation(560,72);
         }
     }

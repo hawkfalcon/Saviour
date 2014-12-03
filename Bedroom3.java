@@ -98,6 +98,6 @@ public class Bedroom3 extends SaviourLevel {
         addObstacle(new Spear(), 615, 315, false, Direction.SOUTH); 
         
         //Key
-        addObject(new Key1(), 667, 508);
+        addObject(new Key(), 667, 508);
     }
 }     

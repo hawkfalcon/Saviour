@@ -95,7 +95,7 @@ public class Kitchen3 extends SaviourLevel {
     }
 
     public void addKeys() {
-        addObject(new Key1(), 800, 85);
-        addObject(new Key2(), 800, 525);
+        addObject(new Key(), 800, 85);
+        addObject(new Key(), 800, 525);
     }
 }

@@ -60,6 +60,6 @@ public class Boss extends SaviourLevel {
         addObstacle(new Arrow(), 730, 370, true, Direction.WEST);
         
         //add Key off screen
-        addObject(new Key1(), 888, 165);
+        addObject(new Key(), 888, 165);
     }
 }

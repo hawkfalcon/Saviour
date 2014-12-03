@@ -44,7 +44,7 @@ public class Endpoint extends Actor {
     }
 
     public void carryKey() {
-        if (getWorld().getObjects(Key1.class).isEmpty()) {
+        if (getWorld().getObjects(Key.class).isEmpty()) {
             holdingkey = true;
         }
     }
