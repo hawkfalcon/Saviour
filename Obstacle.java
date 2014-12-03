@@ -32,6 +32,11 @@ public class Obstacle extends Actor {
                 //add timer
                 GlobalStatistics.getInstance().addTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
                 Stars.getInstance().snatchTime(((Timer)getWorld().getObjects(Timer.class).get(0)).getTime());
+                for (int i = 0; i < 10; i++) {
+                   c.turn(9);
+                }
+                getWorld().addObject(new Blood(), getX(), getY());
+                Greenfoot.delay(4);
                 //remove him
                 getWorld().removeObject(c);
                 //get the world manager
@@ -54,7 +59,6 @@ public class Obstacle extends Actor {
             GreenfootSound arrow = new GreenfootSound("arrow.mp3");
             arrow.setVolume(100);
             arrow.play();  
-            System.out.println("__");
         }
     }
     

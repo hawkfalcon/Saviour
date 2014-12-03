@@ -1,7 +1,8 @@
 #Greenfoot properties
-#Tue Dec 02 15:55:16 PST 2014
+#Tue Dec 02 20:43:19 PST 2014
 class.Character.image=characterright.png
 target24.type=ClassTarget
+class.Blood.image=blood_d_0001.png
 target16.name=SaviourLevel
 target13.editor.width=900
 dependency116.from=Dungeon3
@@ -58,6 +59,7 @@ dependency85.type=UsesDependency
 dependency74.to=Key1
 dependency60.type=UsesDependency
 target14.showInterface=false
+class.Blood.superclass=greenfoot.Actor
 target26.editor.y=23
 target26.editor.x=0
 class.Arrow.image=arrow.png
