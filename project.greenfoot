@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Dec 04 09:54:18 PST 2014
+#Thu Dec 04 14:38:56 PST 2014
 class.Character.image=characterright.png
 target24.type=ClassTarget
 class.Blood.image=blood_d_0001.png
@@ -707,7 +707,7 @@ target11.editor.x=0
 target30.editor.height=700
 dependency29.type=UsesDependency
 target5.height=50
-class.SaviourWinScreen.image=endscreen.jpg
+class.SaviourWinScreen.image=finalwinscreen.jpg
 dependency114.type=UsesDependency
 target36.editor.width=900
 dependency12.to=Obstacle
