@@ -1,12 +1,11 @@
 import greenfoot.*;
-
 import java.awt.*;
 
 public class Timer extends Actor {
 
     private GreenfootImage board;
-    private int bravo = 0;
-    private int yungtimer = 0;
+    private int time = 0;
+    private int counter = 0;
 
     public Timer() {
         int boardWidth = 120;
@@ -24,24 +23,24 @@ public class Timer extends Actor {
 
     public void act() {
         gotTime();
-        yungtimer++;
+        counter++;
     }
 
     private void update() {
         GreenfootImage timer = new GreenfootImage(board);
-        timer.drawImage(new GreenfootImage("Time: " + bravo, 18, Color.WHITE, new Color(0, 0, 0, 0)), 25, 5);
+        timer.drawImage(new GreenfootImage("Time: " + time, 18, Color.WHITE, new Color(0, 0, 0, 0)), 25, 5);
         this.setImage(timer);
     }
 
     private void gotTime() {
-        if (yungtimer == 46) {
-            bravo++;
-            yungtimer = 0;
+        if (counter == 46) {
+            time++;
+            counter = 0;
             update();
         }
     }
 
     public int getTime() {
-        return bravo;
+        return time;
     }
 }

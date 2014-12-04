@@ -2,7 +2,7 @@ public class GlobalStatistics {
 
     private static GlobalStatistics instance = null;
     private int globaltimer = 0;
-    private int globalstars = 0;
+    private int globaldeaths = 0;
 
     public static GlobalStatistics getInstance() {
         if (instance == null) {
@@ -22,12 +22,12 @@ public class GlobalStatistics {
         globaltimer += globaltime;
     }
 
-    public int getStars() {
-        return globalstars;
+    public int getDeaths() {
+        return globaldeaths;
     }
 
-    public void addStars(int starcount) {
-        globalstars += starcount;
+    public void addDeath() {
+        globaldeaths++;
     }
 
 }
