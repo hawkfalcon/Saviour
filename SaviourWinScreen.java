@@ -13,7 +13,7 @@ public class SaviourWinScreen extends World {
        
         showText("CONGRATULATIONS!", getWidth() /3 - 100, getHeight()/4 - 50);
         showText("YOU WON!", getWidth() /3 - 150, getHeight()/4);
-        showText("Total Time:   " + GlobalStatistics.getInstance().getTimer(), getWidth() / 4, (getHeight() / 3)*2);
+        showText("Total Time:   " + GlobalStatistics.getInstance().getTimer(), getWidth() / 3, getHeight() / 3);
     } 
     //restart game on click
     public void act() {
