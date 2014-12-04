@@ -13,7 +13,15 @@ public class SaviourWinScreen extends World {
        
         showText("CONGRATULATIONS!", getWidth() /3 - 100, getHeight()/4 - 50);
         showText("YOU WON!", getWidth() /3 - 150, getHeight()/4);
-        showText("Total Time:   " + GlobalStatistics.getInstance().getTimer(), getWidth() / 3, getHeight() / 3);
+        int totalseconds = 3400;//GlobalStatistics.getInstance().getTimer();
+        int seconds = (int) totalseconds % 60;
+        int minutes = (int) ((totalseconds / 60) % 60);
+        int hours = (int) ((totalseconds / (60*60)) % 24);
+        if (hours != 0) {
+            showText("YOU TOOK OVER AN HOUR. YOU ARE CRAZY!", getWidth() / 3, getHeight() / 3);
+        } else {
+            showText("You beat the game in " + minutes + " minutes and " + seconds + " seconds!", getWidth() / 3, getHeight() / 3);
+        }
     } 
     //restart game on click
     public void act() {

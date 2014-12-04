@@ -35,6 +35,7 @@ public class SaviourLevel extends World {
         initializeWorld(xStart, yStart, xEnd, yEnd);
         //setup objects
         prepare();
+        setPaintOrder(Arrow.class, Acid.class);
         //make sure obstacles are behind the walls
         setPaintOrder(Solid.class, Obstacle.class);
         //make sure the timer is in front
