@@ -7,15 +7,16 @@ public class SaviourWinScreen extends World {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 600, 1); 
        
-        int totalseconds = 3400;//GlobalStatistics.getInstance().getTimer();
+        int totalseconds = GlobalStatistics.getInstance().getTimer();
         int seconds = (int) totalseconds % 60;
         int minutes = (int) ((totalseconds / 60) % 60);
         int hours = (int) ((totalseconds / (60*60)) % 24);
         if (hours != 0) {
-            showText("YOU TOOK OVER AN HOUR. YOU ARE CRAZY!", getWidth() / 3, getHeight() / 3);
+            showText("YOU TOOK OVER AN HOUR.\n YOU ARE CRAZY!", (getWidth() / 4) + 30, getHeight() / 4);
         } else {
-            showText("You beat the game in " + minutes + " minutes and " + seconds + " seconds!", getWidth() / 3, getHeight() / 3);
+            showText("You saved your lover in:\n " + minutes + " minutes and " + seconds + " seconds!", (getWidth() / 4) + 30, getHeight() / 4);
         }
+        showText("You died " + GlobalStatistics.getInstance().getDeaths() + " times!", (getWidth() / 4) + 40, getHeight() / 3);
     } 
     
     //restart game on click

@@ -49,7 +49,7 @@ public class Endpoint extends Actor {
     public void animate(Actor c) {
         getWorld().setPaintOrder(Character.class, Endpoint.class);
         for (int i = 1; i < 6; i++) {
-            setImage("Door" + i + ".png");
+            setImage("door" + i + ".png");
             Greenfoot.delay(3);
         }
         for (int i = 1; i < 40; i++) {

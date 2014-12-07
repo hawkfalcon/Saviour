@@ -31,6 +31,7 @@ public class Obstacle extends Actor {
             if (c != null) {
                 //add timer
                 GlobalStatistics.getInstance().addTime(((Timer) getWorld().getObjects(Timer.class).get(0)).getTime());
+                GlobalStatistics.getInstance().addDeath();
                 for (int i = 0; i < 10; i++) {
                     c.turn(9);
                 }

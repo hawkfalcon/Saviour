@@ -70,5 +70,8 @@ public class Character extends Actor {
         if (Greenfoot.isKeyDown("y")) {
             SaviourWorld.getInstance().setHaungsMode(false);
         }
+        if (Greenfoot.isKeyDown("b")) {
+            SaviourWorld.getInstance().cheat();
+        }
     }
 }
