@@ -22,7 +22,7 @@ public class SaviourWorld {
     public void levelup() {
         currentLevel++;
     }
-    
+
     public void cheat() {
         currentLevel = 10;
     }

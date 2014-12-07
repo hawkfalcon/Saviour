@@ -1,3 +1,4 @@
 import greenfoot.*;
 
-public class Key extends Actor {}
+public class Key extends Actor {
+}

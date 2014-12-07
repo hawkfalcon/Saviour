@@ -99,6 +99,7 @@ public class Bedroom1 extends SaviourLevel {
         addObstacle(new Acid(), 240, 400);
         addObstacle(new Acid(), 280, 400);
     }
+
     public void addKeys() {
         addObject(new Key(), 600, 360);
     }
